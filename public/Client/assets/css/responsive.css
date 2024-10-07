@@ -1,0 +1,360 @@
+@media screen and (min-width:1500px) {
+    .faq-area h2{
+        font-size: 65px;
+    }
+    .team-member img{
+        height: 480px;
+    }
+    .team-member .member-info .member-info-text{
+        height: 100px;
+    }
+    .logo img {
+        width: 220px;
+    }
+}
+@media screen and (min-width: 991px) and (max-width: 1500px) {
+    .header-section .btn-primary {
+        padding: 5px 15px;
+    }
+}
+@media screen and (max-width:1199px) {
+    .search_box input {
+        width: 334px !important;
+    }
+
+    .service_item {
+        border: 0.5 solid #28225E !important;
+    }
+    .faq-area h2{
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .mt_8{
+        margin-top:80px;
+    }
+    .mb_8{
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .banner-content h1 {
+        font-size: 35px;
+        line-height: 48px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .pt-120 {
+        padding-top: 60px;
+    }
+
+    .pb-120 {
+        padding-bottom: 60px;
+    }
+
+    .services-section .custom-shape-divider-top-1713715447 svg {
+        height: 44px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .hero_wrapper h3 {
+        font-size: 22px;
+    }
+
+    .hero_wrapper p {
+        font-size: 16px;
+    }
+    .contact-info {
+        width: 95%;
+        padding: 40px;
+    }
+    .contact-info h4 {
+        margin-top: 80px;
+    }
+    .faq-area .faq-item .faq-image-grid,
+    .faq-area .faq-item .faq-image-full {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+    .service-details.profile{
+        margin-bottom: 60px;
+    }
+    #service{
+        margin-top: -50px;
+    }
+    #service::before{
+        width: 80px;
+    }
+    .page-title-area.curve{
+        height: 500px !important;
+    }
+    .mt-lg-30{
+        margin-top: 30px;
+    }
+    .about-purpose-text{
+        margin-top: 60px;
+    }
+    .service_item.item-1{
+        border-radius: 20px 20px 0 0;
+    }
+    .service_item.item-2{
+        border-radius: 0;
+    }
+    .service_item.item-3{
+        border-radius: 0;
+    }
+    .service_item.item-4{
+        border-radius: 0 0 20px 20px;
+    }
+    .services-four .service_item.item-1{
+        border-radius: 20px 20px 0 0;
+    }
+    .services-four .service_item.item-2{
+        border-radius: 0;
+    }
+    .services-four .service_item.item-3{
+        border-radius: 0;
+    }
+    .services-four .service_item.item-4{
+        border-radius: 0 0 20px 20px;
+    }
+    .about-title-area{
+        height: 500px;
+    }
+    .footer-copyright{
+        justify-content: center;
+    }
+    .footer-bottom .policy{
+        text-align: center;
+    }
+    .page-title-area.curve .page-title-content{
+        margin-top: 200px;
+    }
+    .profile-hero-inner{
+        height: 500px;
+        padding-top: 180px;
+    }
+    .contact-info {
+        height: auto;
+    }
+    .contact_bg{
+        min-height: 800px;
+    }
+    .bannger-section{
+        padding-top: 220px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .banner-content h1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .banner-content p {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .services-section .custom-shape-divider-top-1713715447 svg {
+        height: 25px;
+    }
+    .fixed_menu{
+        padding:18px 10px;
+    }
+    .fixed_menu ul li a {
+        width: 38px;
+        height: 38px;
+        line-height: 35px;
+    }
+    .site_cookie {
+        bottom: 37px;
+        left: 16px;
+        margin-right: 18px;
+    }
+    .page-title-content h2 {
+        font-size: 32px;
+     }
+    .service-details{
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+    .profile-hero-inner-content h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-title-area .profile-hero-inner-content h2{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .profile-hero-inner-media_image img{
+        width: 100%;
+        max-height: 100%;
+        position: unset;
+        margin-left: 0;
+    }
+    .profile-hero-inner{
+        height: auto;
+    }
+    .profile-hero-inner-content{
+        width: 100%;
+        padding-bottom: 60px;
+    }
+    .team-section .team-member{
+        height: auto !important;
+    }
+    .team-section .team-member .member-info .member-info-text {
+        height: auto;
+    }
+    #service::before{
+        width: 60px;
+    }
+    .brand-logo-grid{
+        justify-content: center;
+        gap: 30px;
+    }
+    .about-title_image{
+        margin-bottom: 100px;
+    }
+    .bottom-fixed-bar{
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .contact-info .info-bg img {
+        width: 80px;
+        height: 200px;
+    }
+    .contact-info .info {
+        margin-left: 45px;
+    }
+    .contact-info h4 {
+        font-size: 18px;
+    }
+    .contact-info p a {
+        font-size: 14px;
+    }
+    .contact-info p {
+        font-size: 14px;
+    }
+    .faq-area .faq-item .faq-image-grid {
+        grid-template-columns: 1fr;
+     }
+     .services-btn-wrapper{
+        flex-direction: column;
+     }
+    .services-btn-wrapper .btn-primary{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .brand-logo-wrap{
+        height: auto;
+        padding: 60px 0;
+    }
+    .brand-logo-grid{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .bottom-fixed-bar{
+        max-width: 320px;
+        width: 95%;
+    }
+    .bottom-fixed-bar .btn-single{
+        padding: 10px 15px;
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .two-btn-align{
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+    .two-btn-align a{
+        margin: 0 0 10px !important;
+    }
+    .contact_bg{
+        min-height: 700px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .header-section .btn-primary {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .banner-content h1 {
+        font-size: 22px;
+        line-height: 37px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .pt-120 {
+        padding-top: 30px;
+    }
+
+    .pb-120 {
+        padding-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .team-section .bg-1 {
+        position: absolute;
+        top: -107px;
+        left: -40px;
+    }
+
+    .team-section .bg-2 {
+        position: absolute;
+        bottom: -107px;
+        right: -40px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .logo img {
+        /* width: 150px; */
+    }
+    .offcanvas_menu .logo img {
+        width: 220px;
+    }
+    .header-section .btn-primary {
+        padding: 5px 9px;
+        font-size: 13px;
+    }
+    .faq-area h2 {
+        font-size: 36px;
+     }
+     .profile-hero-inner-content h2{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .site_cookie h5 {
+        font-size: 14px;
+    }
+    .site_cookie p {
+        font-size: 12px;
+    }
+    .site_cookie a {
+        padding: 7px 15px !important;
+    }
+}

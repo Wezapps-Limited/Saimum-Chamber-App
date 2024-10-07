@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:/cpanel/
+Sitemap: https://wezapps.com.bd/sitemap.xml
