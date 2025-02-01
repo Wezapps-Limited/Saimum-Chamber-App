@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Oct 07, 2024 at 12:58 PM
--- Server version: 8.0.39-cll-lve
--- PHP Version: 8.3.11
+-- Host: 127.0.0.1
+-- Generation Time: Jul 08, 2024 at 11:32 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nahian_rancon`
+-- Database: `symon_chamber`
 --
 
 -- --------------------------------------------------------
@@ -28,21 +28,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `about_us` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `story` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `story_text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `mission` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `mission_short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `value` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `value_short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `smt_one` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `smt_one_color` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `smt_two` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `smt_two_color` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `story` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `story_text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mission` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mission_short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `value_short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `smt_one` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `smt_one_color` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `smt_two` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `smt_two_color` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -61,16 +61,16 @@ INSERT INTO `about_us` (`id`, `title`, `short`, `story`, `story_text`, `mission`
 --
 
 CREATE TABLE `blog_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `blog_date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `slug` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_des` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `blog_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -89,17 +89,17 @@ INSERT INTO `blog_manages` (`id`, `title`, `short`, `blog_date`, `description`, 
 --
 
 CREATE TABLE `career_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `linkedin` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `github` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `portfolio_any` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `ex` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `resume` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `accecpt_condition` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `github` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `portfolio_any` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ex` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resume` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `accecpt_condition` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -111,12 +111,12 @@ CREATE TABLE `career_manages` (
 --
 
 CREATE TABLE `category_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sequence` int DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '1',
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sequence` int(11) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -136,10 +136,10 @@ INSERT INTO `category_manages` (`id`, `title`, `sequence`, `status`, `slug`, `im
 --
 
 CREATE TABLE `clients` (
-  `id` bigint UNSIGNED NOT NULL,
-  `short` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sequence` int DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `short` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sequence` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -158,12 +158,12 @@ INSERT INTO `clients` (`id`, `short`, `image`, `sequence`, `created_at`, `update
 --
 
 CREATE TABLE `contact_forms` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `l_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mobile` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `l_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -177,38 +177,7 @@ INSERT INTO `contact_forms` (`id`, `name`, `l_name`, `mobile`, `email`, `message
 (4, 'hamid', 'hamid', NULL, 'hamid@gmail.com', 'hello how are you', '2024-07-08 15:16:15', '2024-07-08 15:16:15'),
 (5, 'hamid', 'hamid', NULL, 'hamid@gmail.com', 'hello how are you', '2024-07-08 15:22:03', '2024-07-08 15:22:03'),
 (6, 'hamid', 'hamid', NULL, 'hamid@gmail.com', 'hello how are you', '2024-07-08 15:24:35', '2024-07-08 15:24:35'),
-(7, 'hamid', 'hamid', NULL, 'hamid@gmail.com', 'hello how are you', '2024-07-08 15:26:52', '2024-07-08 15:26:52'),
-(8, 'William Adair', 'William Adair', NULL, 'accounts@seylanehsabz.com', 'Dear Business Owner, \r\n \r\nHappy to connect with you. Following the downturn of the global economy, The UN, Worldbank, WTO, and the IMF in partnership with some banks in China, America and the Deutsche bank have availed a huge amount of money for investment and re-financing of many lucrative businesses. I\'m reaching out to know if you have any viable project that needs \r\nfunding.Kindly reply to my private email address for quick response and more details... \r\n \r\nRegards, \r\nWilliam Adair \r\n \r\nNB....Get back to me with your direct whatsapp number for easy Communication. \r\nwilliamadair@clare-kirkland.com', '2024-09-02 10:03:05', '2024-09-02 10:03:05'),
-(9, 'cuabiZXPNWdR', 'wTnWzYcIhARi', NULL, 'dazo.jason1989@yahoo.com', 'uaSxwGyjze', '2024-09-04 02:42:24', '2024-09-04 02:42:24'),
-(10, 'cuabiZXPNWdR', 'wTnWzYcIhARi', NULL, 'dazo.jason1989@yahoo.com', 'uaSxwGyjze', '2024-09-04 02:42:25', '2024-09-04 02:42:25'),
-(11, 'Saffet Erdogan', 'Saffet Erdogan', NULL, 'saffetedorgan@gmail.com', 'Hello , \r\n \r\nI hope this message finds you well. I am reaching out to you for my money investment . \r\n \r\nI am currently facing issues with President Recep Tayyip Erdogan,  President Recep has confiscated my money in Turkey. I got a tip off that President Recep Tayyip Erdogan is trying to trace my money abroad. \r\n \r\nIn light of this situation, I am seeking to transfer as an Investor €45,000,000 Million euros in my Account in Germany to your bank account and you will receive the funds in your Bank Account as an Investment Manager , you can invest money in any Lucrative business of your choice,  By Transferring the money to you , I will effectively protect these money from being traced by President Recep Tayyip Erdogan. \r\n \r\nI kindly ask for your prompt response to confirm your willingness to invest the money. Once I receive your confirmation, I will provide you with further details . \r\n \r\nPlease reply to me directly with this email. :  esaffet81@gmail.com \r\n \r\nThank you . \r\n \r\nWarm regards, \r\n \r\nMr. Saffet Erdogan', '2024-09-05 21:47:24', '2024-09-05 21:47:24'),
-(12, 'TedVen', 'TedVen', NULL, 'kayleighbpsteamship@gmail.com', 'Zdravo, htio sam znati vašu cijenu.', '2024-09-05 23:57:52', '2024-09-05 23:57:52'),
-(13, 'kGmOjgSqUwp', 'BFhytdoqUIfs', NULL, 'iolap6janes@outlook.com', 'dAXfcPiWbE', '2024-09-07 11:55:08', '2024-09-07 11:55:08'),
-(14, 'kGmOjgSqUwp', 'BFhytdoqUIfs', NULL, 'iolap6janes@outlook.com', 'dAXfcPiWbE', '2024-09-07 11:55:12', '2024-09-07 11:55:12'),
-(15, 'DavidVen', 'DavidVen', NULL, 'kayleighbpsteamship@gmail.com', 'Sveiki, aš norėjau sužinoti jūsų kainą.', '2024-09-11 11:18:08', '2024-09-11 11:18:08'),
-(16, 'rQibySlePVpW', 'dJLKWEDxjapsG', NULL, 'curtsdawne267283@outlook.com', 'tCozSTgKeD', '2024-09-13 10:00:03', '2024-09-13 10:00:03'),
-(17, 'rQibySlePVpW', 'dJLKWEDxjapsG', NULL, 'curtsdawne267283@outlook.com', 'tCozSTgKeD', '2024-09-13 10:00:13', '2024-09-13 10:00:13'),
-(18, 'Adam', 'Adam', NULL, 'fredrikalfredsson76@gmail.com', 'Hello, \r\n \r\nAdam here from Deletify (https://deletify.com/) \r\n \r\nI\'m wondering if your business has a review on Google that you perceive as misleading, false, or perhaps even written by a competitor? If so, I can help you remove it, and you only pay if I succeed. My teams success rate is over 99%, and it takes us less than a week to get it removed. \r\n \r\nInterested? \r\n \r\nIf you prefer to call me, you can reach me at +1 917 720 3356. My Whatsapp number is +46 72-4473401 (you can also call me at that number too), or you can book a quick videocall at https://calendly.com/aw--u2_r/15min', '2024-09-13 11:38:40', '2024-09-13 11:38:40'),
-(19, 'MasonVen', 'MasonVen', NULL, 'yjdisantoyjdissemin@gmail.com', 'Hæ, ég vildi vita verð þitt.', '2024-09-13 16:20:35', '2024-09-13 16:20:35'),
-(20, 'TedVen', 'TedVen', NULL, 'kayleighbpsteamship@gmail.com', 'Aloha, makemake wau eʻike i kāu kumukūʻai.', '2024-09-15 02:28:31', '2024-09-15 02:28:31'),
-(21, 'UsyWTKbvx', 'yfhOZbJxqQtvlg', NULL, 'john37bishopncu@outlook.com', 'XyrDlMAWaiYn', '2024-09-15 18:01:39', '2024-09-15 18:01:39'),
-(22, 'UsyWTKbvx', 'yfhOZbJxqQtvlg', NULL, 'john37bishopncu@outlook.com', 'XyrDlMAWaiYn', '2024-09-15 18:01:42', '2024-09-15 18:01:42'),
-(23, 'Edwin', 'Freeman', NULL, 'n/a', 'Hi! \r\n\r\nNeed a website that is both visually appealing and functional? Our site design services do just that. We design websites that are not only visually appealing but also efficient, resulting in a smooth and engaging user experience.\r\n\r\nLet us create the perfect site for your business. Let us engage!\r\n\r\nBest,\r\n\n\nEdwin Freeman', '2024-09-16 18:34:53', '2024-09-16 18:34:53'),
-(24, 'MasonVen', 'MasonVen', NULL, 'yjdisantoyjdissemin@gmail.com', 'হাই, আমি আপনার মূল্য জানতে চেয়েছিলাম.', '2024-09-19 20:36:16', '2024-09-19 20:36:16'),
-(25, 'HpCqaVsxjhf', 'qiLEvxDLUdFFYF', NULL, 'gregoryah_gregory26@outlook.com', NULL, '2024-09-20 21:33:58', '2024-09-20 21:33:58'),
-(26, 'HpCqaVsxjhf', 'qiLEvxDLUdFFYF', NULL, 'gregoryah_gregory26@outlook.com', NULL, '2024-09-20 21:34:03', '2024-09-20 21:34:03'),
-(27, 'MasonVen', 'MasonVen', NULL, 'yjdisantoyjdissemin@gmail.com', 'Ciao, volevo sapere il tuo prezzo.', '2024-09-22 17:49:29', '2024-09-22 17:49:29'),
-(28, 'DavidVen', 'DavidVen', NULL, 'kayleighbpsteamship@gmail.com', 'Hi, kam dashur të di çmimin tuaj', '2024-09-23 04:09:58', '2024-09-23 04:09:58'),
-(29, 'BiallyVat', 'BiallyVat', NULL, 'NoibraNit@mailport.lat', 'Monitor Closely 1 artemether lumefantrine will decrease the level or effect of cinacalcet by affecting hepatic intestinal enzyme CYP3A4 metabolism <a href=https://enhanceyourlife.mom/>buy priligy in usa</a>', '2024-09-23 21:05:35', '2024-09-23 21:05:35'),
-(30, 'kMRWeldWOCYmbd', 'cKyGWZkotM', NULL, 'bangymwewa@yahoo.com', NULL, '2024-09-24 03:03:15', '2024-09-24 03:03:15'),
-(31, 'kMRWeldWOCYmbd', 'cKyGWZkotM', NULL, 'bangymwewa@yahoo.com', NULL, '2024-09-24 03:03:17', '2024-09-24 03:03:17'),
-(32, 'wNJYVpSP', 'EBEWTgBlLxNQE', NULL, 'hans_gabrielofc@yahoo.com', NULL, '2024-09-27 08:34:11', '2024-09-27 08:34:11'),
-(33, 'wNJYVpSP', 'EBEWTgBlLxNQE', NULL, 'hans_gabrielofc@yahoo.com', NULL, '2024-09-27 08:34:23', '2024-09-27 08:34:23'),
-(34, 'TedVen', 'TedVen', NULL, 'kayleighbpsteamship@gmail.com', 'Ողջույն, ես ուզում էի իմանալ ձեր գինը.', '2024-09-27 13:05:27', '2024-09-27 13:05:27'),
-(35, 'WESTOILGAZ', 'WESTOILGAZ', NULL, 'westoilgaz5@gmail.com', 'Dear Sir/Madam, \r\n \r\nWe, WESTOILGAZ.KZ, are an end seller/refinery in Kazakhstan specializing in crude and refined petroleum products. With full legal responsibility, we present this product offer, detailing the terms and procedures outlined in our soft corporate offer. We are ready to execute a Sales and Purchase Agreement under CIF/FOB/TTO/TTV, including FCA, CPT, CIP, DDP, or DAP terms, with an end buyer or buyer representatives. Our available commodities include: \r\n \r\n- Prilled Sulphur / Urea-46% \r\n- Base Oil SN500 - DAP \r\n- Diesel Gas D2 (GOST 305-82) \r\n- Petroleum Coke \r\n- Fuel Oil \r\n- Automotive Gas Oil (AGO) \r\n- Aviation Kerosene Colonial Grade Jet A1 \r\n- ESPO, EN590-10 ppm, Jet-54, Crude Oil, and more \r\n \r\nWe confirm our readiness to issue an SCO/ICPO/contract upon your request. \r\n \r\nPlease reply to this email only: sales@westoilgaz.kz. \r\n \r\nThank you. \r\nBest Regards, \r\nhttp://www.westoilgaz.kz/ \r\nsales@westoilgaz.kz', '2024-09-28 10:15:26', '2024-09-28 10:15:26'),
-(36, 'Healthvew', 'Healthvew', NULL, 'fda@med.com', 'Glenn with Nicholas and Heath begin to head off to the hardware store that they have to clear. \r\nbest price \r\nbuy http://cmx.com/private/pharmacy/cenforce/ cenforce \r\n<a href=http://cmx.com/private/pharmacy/cenforce/>http://cmx.com/private/pharmacy/cenforce/</a> \r\nThis thesis aims to contribute to the understanding of how we better support teaching and learning of undergraduate chemistry to make it meaningful and intelligible for students from the outset.', '2024-10-01 02:46:25', '2024-10-01 02:46:25'),
-(37, 'TedVen', 'TedVen', NULL, 'kayleighbpsteamship@gmail.com', 'Hej, jeg ønskede at kende din pris.', '2024-10-02 02:10:22', '2024-10-02 02:10:22'),
-(38, 'DavidVen', 'DavidVen', NULL, 'kayleighbpsteamship@gmail.com', 'Sawubona, bengifuna ukwazi intengo yakho.', '2024-10-02 20:07:55', '2024-10-02 20:07:55');
+(7, 'hamid', 'hamid', NULL, 'hamid@gmail.com', 'hello how are you', '2024-07-08 15:26:52', '2024-07-08 15:26:52');
 
 -- --------------------------------------------------------
 
@@ -217,14 +186,14 @@ INSERT INTO `contact_forms` (`id`, `name`, `l_name`, `mobile`, `email`, `message
 --
 
 CREATE TABLE `contact_us` (
-  `id` bigint UNSIGNED NOT NULL,
-  `mobile_one` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mobile_two` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tel` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `fax` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email_one` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email_two` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `office_address` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `mobile_one` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile_two` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tel` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_one` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_two` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `office_address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -243,17 +212,17 @@ INSERT INTO `contact_us` (`id`, `mobile_one`, `mobile_two`, `tel`, `fax`, `email
 --
 
 CREATE TABLE `email_configs` (
-  `id` bigint UNSIGNED NOT NULL,
-  `mailer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_host` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_port` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_encryption` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_form_address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_form_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mail_to` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '1',
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `mailer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_host` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_port` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_encryption` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_form_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_form_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mail_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -272,13 +241,13 @@ INSERT INTO `email_configs` (`id`, `mailer`, `mail_host`, `mail_port`, `mail_use
 --
 
 CREATE TABLE `failed_jobs` (
-  `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -288,10 +257,10 @@ CREATE TABLE `failed_jobs` (
 --
 
 CREATE TABLE `faqs` (
-  `id` bigint UNSIGNED NOT NULL,
-  `question` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sequence` int DEFAULT NULL,
-  `ans` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `question` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sequence` int(11) DEFAULT NULL,
+  `ans` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -311,11 +280,11 @@ INSERT INTO `faqs` (`id`, `question`, `sequence`, `ans`, `created_at`, `updated_
 --
 
 CREATE TABLE `faq_texts` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `short_one` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short_one` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -334,9 +303,9 @@ INSERT INTO `faq_texts` (`id`, `title`, `short`, `short_one`, `image`, `created_
 --
 
 CREATE TABLE `google_analytics_scripts` (
-  `id` bigint UNSIGNED NOT NULL,
-  `pixel_analytics` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `google_tag_manager` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `pixel_analytics` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `google_tag_manager` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -355,12 +324,12 @@ INSERT INTO `google_analytics_scripts` (`id`, `pixel_analytics`, `google_tag_man
 --
 
 CREATE TABLE `join_us` (
-  `id` bigint UNSIGNED NOT NULL,
-  `first_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -372,12 +341,12 @@ CREATE TABLE `join_us` (
 --
 
 CREATE TABLE `logos` (
-  `id` bigint UNSIGNED NOT NULL,
-  `logo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `footer_logo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `left_logo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `registration_number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `footer_logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `left_logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `registration_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -396,9 +365,9 @@ INSERT INTO `logos` (`id`, `logo`, `footer_logo`, `left_logo`, `registration_num
 --
 
 CREATE TABLE `migrations` (
-  `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int NOT NULL
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -486,15 +455,15 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `news_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `news_date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_des` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `slug` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `news_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -513,18 +482,18 @@ INSERT INTO `news_manages` (`id`, `title`, `description`, `news_date`, `meta_tit
 --
 
 CREATE TABLE `our_experts` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `designation` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `hover_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
-  `mobile` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mobile_one` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tel` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `linkedin` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hover_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
+  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile_one` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tel` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -543,9 +512,9 @@ INSERT INTO `our_experts` (`id`, `name`, `designation`, `email`, `image`, `hover
 --
 
 CREATE TABLE `our_experts_infos` (
-  `id` bigint UNSIGNED NOT NULL,
-  `expert_id` int DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `expert_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -564,8 +533,8 @@ INSERT INTO `our_experts_infos` (`id`, `expert_id`, `name`, `created_at`, `updat
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -576,12 +545,12 @@ CREATE TABLE `password_resets` (
 --
 
 CREATE TABLE `personal_access_tokens` (
-  `id` bigint UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tokenable_id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -594,10 +563,10 @@ CREATE TABLE `personal_access_tokens` (
 --
 
 CREATE TABLE `section_manages` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `top_title` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '1',
+  `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -609,10 +578,10 @@ CREATE TABLE `section_manages` (
 --
 
 CREATE TABLE `seo_tools` (
-  `id` bigint UNSIGNED NOT NULL,
-  `meta_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_des` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `header_code` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `meta_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `header_code` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -631,13 +600,11 @@ INSERT INTO `seo_tools` (`id`, `meta_title`, `meta_des`, `header_code`, `created
 --
 
 CREATE TABLE `slider_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `book_meeting_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `book_meeting_link_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_link_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `book_meeting_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -646,9 +613,9 @@ CREATE TABLE `slider_manages` (
 -- Dumping data for table `slider_manages`
 --
 
-INSERT INTO `slider_manages` (`id`, `title`, `short`, `book_meeting_link`, `contact_link`, `book_meeting_link_url`, `contact_link_url`, `created_at`, `updated_at`) VALUES
-(1, 'Exemplary Legal Counsel: Your Gateway to UK Immigration Success', NULL, 'Book a meeting', 'Contact Us', 'https://calendly.com/info-gqjl/100-consultation-with-uk-immigration-lawyer?month=2024-05', '#', '2024-07-04 01:30:27', '2024-09-22 00:42:05'),
-(2, 'We provide quality legal services for Companies & Individuals', NULL, 'Book a meeting', 'Contact Us', '#', '#', '2024-07-04 01:31:04', '2024-09-22 00:43:23');
+INSERT INTO `slider_manages` (`id`, `title`, `short`, `book_meeting_link`, `contact_link`, `created_at`, `updated_at`) VALUES
+(1, 'Exemplary Legal Counsel: Your Gateway to UK Immigration Success', 'Providing legal immigration related services tailored for individuals and commercial client. our qualified and experienced advisor can support you with their exceptional work.', '#', '#', '2024-07-04 01:30:27', '2024-07-04 01:30:27'),
+(2, 'We provide quality legal services for Companies & Individuals', 'With 11 years of industry experience, we understand the need for focused and customized immigration  plans that facilitate smooth transitions', '#', '#', '2024-07-04 01:31:04', '2024-07-04 01:31:04');
 
 -- --------------------------------------------------------
 
@@ -657,9 +624,9 @@ INSERT INTO `slider_manages` (`id`, `title`, `short`, `book_meeting_link`, `cont
 --
 
 CREATE TABLE `social_icons` (
-  `id` bigint UNSIGNED NOT NULL,
-  `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -678,8 +645,8 @@ INSERT INTO `social_icons` (`id`, `icon`, `url`, `created_at`, `updated_at`) VAL
 --
 
 CREATE TABLE `subscriber_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -699,16 +666,16 @@ INSERT INTO `subscriber_manages` (`id`, `email`, `created_at`, `updated_at`) VAL
 --
 
 CREATE TABLE `testimonials` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `short` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sequence` int DEFAULT NULL,
-  `status` int NOT NULL DEFAULT '1',
-  `meta_title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_des` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `slug` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sequence` int(11) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `meta_title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -727,8 +694,8 @@ INSERT INTO `testimonials` (`id`, `name`, `short`, `sequence`, `status`, `meta_t
 --
 
 CREATE TABLE `testimonial_texts` (
-  `id` bigint UNSIGNED NOT NULL,
-  `short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -747,23 +714,23 @@ INSERT INTO `testimonial_texts` (`id`, `short`, `created_at`, `updated_at`) VALU
 --
 
 CREATE TABLE `users` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `super_admin` int DEFAULT NULL,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'user',
-  `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_login_ip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_login_time` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_device_name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `email_verify` int NOT NULL DEFAULT '1',
-  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `super_admin` int(11) DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'user',
+  `role` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_login_ip` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_login_time` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_device_name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_verify` int(11) NOT NULL DEFAULT 1,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `after_password` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `after_password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -773,7 +740,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `user_name`, `email`, `super_admin`, `status`, `role`, `last_login_ip`, `last_login_time`, `last_device_name`, `email_verify`, `phone`, `image`, `email_verified_at`, `password`, `after_password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Jason!', 'Super Admin', 'admin@saimumchambers.com', 2, 'super_admin', '2', '103.112.206.111', '2024-09-22 08:27:12', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 1, '01701000654', '1704697524.jpg', '2023-09-02 06:31:56', '$2y$10$t22qLqgkgGrYjuI5m.ntMu1bC52qKgkbDy0ULZuGLqrh/vPW8SMf2', '12345678', NULL, NULL, '2024-09-22 00:27:12'),
+(1, 'Jason!', 'Super Admin', 'SuperAdmin@gmail.com', 2, 'super_admin', '2', '127.0.0.1', '2024-07-08 19:30:46', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 1, '01701000654', '1704697524.jpg', '2023-09-02 06:31:56', '$2y$10$t22qLqgkgGrYjuI5m.ntMu1bC52qKgkbDy0ULZuGLqrh/vPW8SMf2', '12345678', NULL, NULL, '2024-07-08 13:30:46'),
 (6, 'Jason!', NULL, 'admin@gmail.com', NULL, 'user', '2', '45.120.99.249', '2024-03-23 07:49:18', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36', 1, '01701000654', NULL, NULL, '$2y$10$Fbv7GPMqunv73sxyssehvuNAly.8i9D636Xq7S3cjIdrzMyaFG/t2', NULL, NULL, '2024-02-17 13:21:14', '2024-03-23 07:49:18');
 
 -- --------------------------------------------------------
@@ -783,11 +750,11 @@ INSERT INTO `users` (`id`, `name`, `user_name`, `email`, `super_admin`, `status`
 --
 
 CREATE TABLE `video_galleries` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `video_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sequence` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sequence` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -807,12 +774,12 @@ INSERT INTO `video_galleries` (`id`, `title`, `image`, `video_link`, `sequence`,
 --
 
 CREATE TABLE `visa_key_contacts` (
-  `id` bigint UNSIGNED NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `designation` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -832,15 +799,12 @@ INSERT INTO `visa_key_contacts` (`id`, `image`, `name`, `designation`, `email`, 
 --
 
 CREATE TABLE `visa_manages` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` int DEFAULT NULL,
-  `bg_color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `meta_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_keyword` text COLLATE utf8mb4_unicode_ci,
-  `meta_des` text COLLATE utf8mb4_unicode_ci,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` int(11) DEFAULT NULL,
+  `bg_color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -849,11 +813,11 @@ CREATE TABLE `visa_manages` (
 -- Dumping data for table `visa_manages`
 --
 
-INSERT INTO `visa_manages` (`id`, `title`, `slug`, `type`, `bg_color`, `description`, `meta_title`, `meta_keyword`, `meta_des`, `created_at`, `updated_at`) VALUES
-(1, 'Business Sponsorship License Application', 'business-sponsorship-license-application', 1, '#52558a', '<p>Spouse visa application :</p>\r\n\r\n<p>Bringing families together is at the heart of what we do. Our immigration law firm specializes in helping couples navigate the complex process of obtaining spouse visas. We provide expert guidance to ensure your application is handled with care and precision.</p>\r\n\r\n<p>Personalized approach :&nbsp;We recognize that each case is unique, and we tailor our services to meet your specific needs and circumstance.</p>\r\n\r\n<p>Documentation preparation :&nbsp;Our team assists you in gathering and organizing the necessary documentation to support your application, ensuring nothing is overlooked.</p>\r\n\r\n<p>Application submission :&nbsp;We handle the entire application submission process on your behalf, ensuring all forms are completed accurately and submitted within the required timeframe.</p>\r\n\r\n<p>Spouse visa requirements :</p>\r\n\r\n<p>Here&rsquo;s some terms of requirements which is crucial for spouse visa:</p>\r\n\r\n<p>Relationship status :&nbsp;You must be legally married to or in a civil partnership with a British citizen or settled person (someone with indefinite leave to remain or permanent residency in the UK).</p>\r\n\r\n<p>Financial requirement :&nbsp;You need to demonstrate that you and your partner meet the minimum income threshold, either through employment, self-employment, savings, or a combination of these.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>The amount depends on who you&rsquo;re applying for.</p>\r\n\r\n<p>Family member How much you need to earn per year before tax :</p>\r\n\r\n<ul>\r\n	<li>Just your spouse or partner &pound;18,600</li>\r\n	<li>Your spouse or partner and one child &pound;22,400</li>\r\n	<li>Each additional child &pound;2,400</li>\r\n</ul>\r\n\r\n<p>English language proficiency :&nbsp;In most cases, you&#39;ll need to prove your English language ability by passing an approved English language test.For all other applicants, valid evidence of his/her proficiency in the English language at the A1 level is required.</p>\r\n\r\n<p>Genuine relationship :&nbsp;You&#39;ll need to provide evidence to prove the genuineness of your relationship, including photos, communication records, joint bank accounts, and other supporting documents.</p>\r\n\r\n<p>Health and care requirements :&nbsp;You and your partner must meet certain health and character requirements, which may involve undergoing medical examinations and providing police clearance certificates.</p>\r\n\r\n<p>It&#39;s essential to consult with an immigration lawyer or advisor to ensure you meet all the specific requirements and to receive personalized guidance tailored to your situation. Regulations may vary depending on individual circumstances and any recent updates to immigration laws.</p>\r\n\r\n<p>Spouse visa refused :</p>\r\n\r\n<p>Here some common reason behind the refusal of UK spouse visa immigration:</p>\r\n\r\n<p>1. Inadequate Proof Of Your Relationship</p>\r\n\r\n<p>One of the most common reasons for a spouse visa refusal is the absence of adequate evidence to prove the authenticity of the association. The Home Office expects substantial proof that your connection with your UK partner is honest and ongoing. This can include photographs, communication transcripts (emails, texts, WhatsApp messages), joint financial documents, and testimonies from friends and family. The key is to provide comprehensive evidence that paints a clear picture of your relationship&rsquo;s authenticity.</p>\r\n\r\n<p>2. Failure To Meet The Financial Requirement</p>\r\n\r\n<p>The financial requirement for all family visas in the UK is&nbsp;&pound;29,000 as of April 11th 2024. This will once again rise to&nbsp;&pound;34,500 later in 2024, after which it will rise once again to &pound;38,700 by early 2025. The UK government often revises these financial thresholds.</p>\r\n\r\n<p>This threshold can increase if children are involved. Providing clear, accurate financial documents is essential. It&rsquo;s not enough to satisfy the economic criteria; you must also adequately prove it.</p>\r\n\r\n<p>If you want to know more information just contact us. Our expertise will provide you the information and guide you properly.</p>\r\n\r\n<p>Spouse visa curtailment after divorce :</p>\r\n\r\n<p>Typically, this visa is curtailed to a period of 60 days. This period is crucial as it gives you, the visa holder, time to consider your options and decide on the best course of action for yourself and any children involved.</p>\r\n\r\n<p>Notifying the Home office about the separation :</p>\r\n\r\n<p>To inform the Home Office, you have two options: email or post.</p>\r\n\r\n<p>Your notification needs to be detailed, encompassing specific personal information for both you and your ex-partner, including:</p>\r\n\r\n<ul>\r\n	<li>Full names and dates of birth.</li>\r\n	<li>Your current living address.</li>\r\n	<li>Passport numbers.</li>\r\n	<li>Any Home Office reference numbers associated with your cases.</li>\r\n</ul>\r\n\r\n<p>If children are involved, further details are necessary :</p>\r\n\r\n<ul>\r\n	<li>Children&rsquo;s names, dates of birth, and the names of their parents or guardians.</li>\r\n	<li>Their living arrangements, as well as any custody or visitation details.visa holder</li>\r\n	<li>Information about child maintenance, financial support, and any family court proceedings in progress.</li>\r\n</ul>\r\n\r\n<p>In addition to this, you are required to attach either a Public Statement or a Consent Form to your notification :</p>\r\n\r\n<ul>\r\n	<li>The Public Statement&nbsp;is chosen if you wish to keep the contents of your communication private from your ex-partner.</li>\r\n	<li>The Consent Form&nbsp;is for those who agree to the Home Office sharing the notification&rsquo;s details with the ex-partner.</li>\r\n</ul>\r\n\r\n<p>These forms must be properly filled, printed, scanned, emailed, or sent via post alongside your letter. This communication is a vital legal requirement and ensures that you follow the correct procedures to maintain or adjust your immigration status in the UK.</p>', NULL, NULL, NULL, '2024-07-04 03:06:44', '2024-07-07 03:31:48'),
-(2, 'Self Sponsor Visa', 'self-sponsor-visa', 1, '#52558a', '<p>Spouse visa application :</p>\r\n\r\n<p>Bringing families together is at the heart of what we do. Our immigration law firm specializes in helping couples navigate the complex process of obtaining spouse visas. We provide expert guidance to ensure your application is handled with care and precision.</p>\r\n\r\n<p>Personalized approach :&nbsp;We recognize that each case is unique, and we tailor our services to meet your specific needs and circumstance.</p>\r\n\r\n<p>Documentation preparation :&nbsp;Our team assists you in gathering and organizing the necessary documentation to support your application, ensuring nothing is overlooked.</p>\r\n\r\n<p>Application submission :&nbsp;We handle the entire application submission process on your behalf, ensuring all forms are completed accurately and submitted within the required timeframe.</p>\r\n\r\n<p>Spouse visa requirements :</p>\r\n\r\n<p>Here&rsquo;s some terms of requirements which is crucial for spouse visa:</p>\r\n\r\n<p>Relationship status :&nbsp;You must be legally married to or in a civil partnership with a British citizen or settled person (someone with indefinite leave to remain or permanent residency in the UK).</p>\r\n\r\n<p>Financial requirement :&nbsp;You need to demonstrate that you and your partner meet the minimum income threshold, either through employment, self-employment, savings, or a combination of these.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>The amount depends on who you&rsquo;re applying for.</p>\r\n\r\n<p>Family member How much you need to earn per year before tax :</p>\r\n\r\n<ul>\r\n	<li>Just your spouse or partner &pound;18,600</li>\r\n	<li>Your spouse or partner and one child &pound;22,400</li>\r\n	<li>Each additional child &pound;2,400</li>\r\n</ul>\r\n\r\n<p>English language proficiency :&nbsp;In most cases, you&#39;ll need to prove your English language ability by passing an approved English language test.For all other applicants, valid evidence of his/her proficiency in the English language at the A1 level is required.</p>\r\n\r\n<p>Genuine relationship :&nbsp;You&#39;ll need to provide evidence to prove the genuineness of your relationship, including photos, communication records, joint bank accounts, and other supporting documents.</p>\r\n\r\n<p>Health and care requirements :&nbsp;You and your partner must meet certain health and character requirements, which may involve undergoing medical examinations and providing police clearance certificates.</p>\r\n\r\n<p>It&#39;s essential to consult with an immigration lawyer or advisor to ensure you meet all the specific requirements and to receive personalized guidance tailored to your situation. Regulations may vary depending on individual circumstances and any recent updates to immigration laws.</p>\r\n\r\n<p>Spouse visa refused :</p>\r\n\r\n<p>Here some common reason behind the refusal of UK spouse visa immigration:</p>\r\n\r\n<p>1. Inadequate Proof Of Your Relationship</p>\r\n\r\n<p>One of the most common reasons for a spouse visa refusal is the absence of adequate evidence to prove the authenticity of the association. The Home Office expects substantial proof that your connection with your UK partner is honest and ongoing. This can include photographs, communication transcripts (emails, texts, WhatsApp messages), joint financial documents, and testimonies from friends and family. The key is to provide comprehensive evidence that paints a clear picture of your relationship&rsquo;s authenticity.</p>\r\n\r\n<p>2. Failure To Meet The Financial Requirement</p>\r\n\r\n<p>The financial requirement for all family visas in the UK is&nbsp;&pound;29,000 as of April 11th 2024. This will once again rise to&nbsp;&pound;34,500 later in 2024, after which it will rise once again to &pound;38,700 by early 2025. The UK government often revises these financial thresholds.</p>\r\n\r\n<p>This threshold can increase if children are involved. Providing clear, accurate financial documents is essential. It&rsquo;s not enough to satisfy the economic criteria; you must also adequately prove it.</p>\r\n\r\n<p>If you want to know more information just contact us. Our expertise will provide you the information and guide you properly.</p>\r\n\r\n<p>Spouse visa curtailment after divorce :</p>\r\n\r\n<p>Typically, this visa is curtailed to a period of 60 days. This period is crucial as it gives you, the visa holder, time to consider your options and decide on the best course of action for yourself and any children involved.</p>\r\n\r\n<p>Notifying the Home office about the separation :</p>\r\n\r\n<p>To inform the Home Office, you have two options: email or post.</p>\r\n\r\n<p>Your notification needs to be detailed, encompassing specific personal information for both you and your ex-partner, including:</p>\r\n\r\n<ul>\r\n	<li>Full names and dates of birth.</li>\r\n	<li>Your current living address.</li>\r\n	<li>Passport numbers.</li>\r\n	<li>Any Home Office reference numbers associated with your cases.</li>\r\n</ul>\r\n\r\n<p>If children are involved, further details are necessary :</p>\r\n\r\n<ul>\r\n	<li>Children&rsquo;s names, dates of birth, and the names of their parents or guardians.</li>\r\n	<li>Their living arrangements, as well as any custody or visitation details.visa holder</li>\r\n	<li>Information about child maintenance, financial support, and any family court proceedings in progress.</li>\r\n</ul>\r\n\r\n<p>In addition to this, you are required to attach either a Public Statement or a Consent Form to your notification :</p>\r\n\r\n<ul>\r\n	<li>The Public Statement&nbsp;is chosen if you wish to keep the contents of your communication private from your ex-partner.</li>\r\n	<li>The Consent Form&nbsp;is for those who agree to the Home Office sharing the notification&rsquo;s details with the ex-partner.</li>\r\n</ul>\r\n\r\n<p>These forms must be properly filled, printed, scanned, emailed, or sent via post alongside your letter. This communication is a vital legal requirement and ensures that you follow the correct procedures to maintain or adjust your immigration status in the UK.</p>', NULL, NULL, NULL, '2024-07-04 03:18:53', '2024-07-07 03:19:55'),
-(3, 'Family Visa', 'family-visa', 2, '#fdba55', '<p>Spouse visa application :</p>\r\n\r\n<p>Bringing families together is at the heart of what we do. Our immigration law firm specializes in helping couples navigate the complex process of obtaining spouse visas. We provide expert guidance to ensure your application is handled with care and precision.</p>\r\n\r\n<p>Personalized approach :&nbsp;We recognize that each case is unique, and we tailor our services to meet your specific needs and circumstance.</p>\r\n\r\n<p>Documentation preparation :&nbsp;Our team assists you in gathering and organizing the necessary documentation to support your application, ensuring nothing is overlooked.</p>\r\n\r\n<p>Application submission :&nbsp;We handle the entire application submission process on your behalf, ensuring all forms are completed accurately and submitted within the required timeframe.</p>\r\n\r\n<p>Spouse visa requirements :</p>\r\n\r\n<p>Here&rsquo;s some terms of requirements which is crucial for spouse visa:</p>\r\n\r\n<p>Relationship status :&nbsp;You must be legally married to or in a civil partnership with a British citizen or settled person (someone with indefinite leave to remain or permanent residency in the UK).</p>\r\n\r\n<p>Financial requirement :&nbsp;You need to demonstrate that you and your partner meet the minimum income threshold, either through employment, self-employment, savings, or a combination of these.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>The amount depends on who you&rsquo;re applying for.</p>\r\n\r\n<p>Family member How much you need to earn per year before tax :</p>\r\n\r\n<ul>\r\n	<li>Just your spouse or partner &pound;18,600</li>\r\n	<li>Your spouse or partner and one child &pound;22,400</li>\r\n	<li>Each additional child &pound;2,400</li>\r\n</ul>\r\n\r\n<p>English language proficiency :&nbsp;In most cases, you&#39;ll need to prove your English language ability by passing an approved English language test.For all other applicants, valid evidence of his/her proficiency in the English language at the A1 level is required.</p>\r\n\r\n<p>Genuine relationship :&nbsp;You&#39;ll need to provide evidence to prove the genuineness of your relationship, including photos, communication records, joint bank accounts, and other supporting documents.</p>\r\n\r\n<p>Health and care requirements :&nbsp;You and your partner must meet certain health and character requirements, which may involve undergoing medical examinations and providing police clearance certificates.</p>\r\n\r\n<p>It&#39;s essential to consult with an immigration lawyer or advisor to ensure you meet all the specific requirements and to receive personalized guidance tailored to your situation. Regulations may vary depending on individual circumstances and any recent updates to immigration laws.</p>\r\n\r\n<p>Spouse visa refused :</p>\r\n\r\n<p>Here some common reason behind the refusal of UK spouse visa immigration:</p>\r\n\r\n<p>1. Inadequate Proof Of Your Relationship</p>\r\n\r\n<p>One of the most common reasons for a spouse visa refusal is the absence of adequate evidence to prove the authenticity of the association. The Home Office expects substantial proof that your connection with your UK partner is honest and ongoing. This can include photographs, communication transcripts (emails, texts, WhatsApp messages), joint financial documents, and testimonies from friends and family. The key is to provide comprehensive evidence that paints a clear picture of your relationship&rsquo;s authenticity.</p>\r\n\r\n<p>2. Failure To Meet The Financial Requirement</p>\r\n\r\n<p>The financial requirement for all family visas in the UK is&nbsp;&pound;29,000 as of April 11th 2024. This will once again rise to&nbsp;&pound;34,500 later in 2024, after which it will rise once again to &pound;38,700 by early 2025. The UK government often revises these financial thresholds.</p>\r\n\r\n<p>This threshold can increase if children are involved. Providing clear, accurate financial documents is essential. It&rsquo;s not enough to satisfy the economic criteria; you must also adequately prove it.</p>\r\n\r\n<p>If you want to know more information just contact us. Our expertise will provide you the information and guide you properly.</p>\r\n\r\n<p>Spouse visa curtailment after divorce :</p>\r\n\r\n<p>Typically, this visa is curtailed to a period of 60 days. This period is crucial as it gives you, the visa holder, time to consider your options and decide on the best course of action for yourself and any children involved.</p>\r\n\r\n<p>Notifying the Home office about the separation :</p>\r\n\r\n<p>To inform the Home Office, you have two options: email or post.</p>\r\n\r\n<p>Your notification needs to be detailed, encompassing specific personal information for both you and your ex-partner, including:</p>\r\n\r\n<ul>\r\n	<li>Full names and dates of birth.</li>\r\n	<li>Your current living address.</li>\r\n	<li>Passport numbers.</li>\r\n	<li>Any Home Office reference numbers associated with your cases.</li>\r\n</ul>\r\n\r\n<p>If children are involved, further details are necessary :</p>\r\n\r\n<ul>\r\n	<li>Children&rsquo;s names, dates of birth, and the names of their parents or guardians.</li>\r\n	<li>Their living arrangements, as well as any custody or visitation details.visa holder</li>\r\n	<li>Information about child maintenance, financial support, and any family court proceedings in progress.</li>\r\n</ul>\r\n\r\n<p>In addition to this, you are required to attach either a Public Statement or a Consent Form to your notification :</p>\r\n\r\n<ul>\r\n	<li>The Public Statement&nbsp;is chosen if you wish to keep the contents of your communication private from your ex-partner.</li>\r\n	<li>The Consent Form&nbsp;is for those who agree to the Home Office sharing the notification&rsquo;s details with the ex-partner.</li>\r\n</ul>\r\n\r\n<p>These forms must be properly filled, printed, scanned, emailed, or sent via post alongside your letter. This communication is a vital legal requirement and ensures that you follow the correct procedures to maintain or adjust your immigration status in the UK.</p>', NULL, NULL, NULL, '2024-07-04 03:19:33', '2024-07-07 03:21:25'),
-(4, 'bdfghfdgfd', 'bdfghfdgfd', 3, NULL, '<p>fdsfsdf</p>', NULL, NULL, NULL, '2024-07-05 19:19:16', '2024-07-05 19:19:16');
+INSERT INTO `visa_manages` (`id`, `title`, `slug`, `type`, `bg_color`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Business Sponsorship License Application', 'business-sponsorship-license-application', 1, '#52558a', '<p>Spouse visa application :</p>\r\n\r\n<p>Bringing families together is at the heart of what we do. Our immigration law firm specializes in helping couples navigate the complex process of obtaining spouse visas. We provide expert guidance to ensure your application is handled with care and precision.</p>\r\n\r\n<p>Personalized approach :&nbsp;We recognize that each case is unique, and we tailor our services to meet your specific needs and circumstance.</p>\r\n\r\n<p>Documentation preparation :&nbsp;Our team assists you in gathering and organizing the necessary documentation to support your application, ensuring nothing is overlooked.</p>\r\n\r\n<p>Application submission :&nbsp;We handle the entire application submission process on your behalf, ensuring all forms are completed accurately and submitted within the required timeframe.</p>\r\n\r\n<p>Spouse visa requirements :</p>\r\n\r\n<p>Here&rsquo;s some terms of requirements which is crucial for spouse visa:</p>\r\n\r\n<p>Relationship status :&nbsp;You must be legally married to or in a civil partnership with a British citizen or settled person (someone with indefinite leave to remain or permanent residency in the UK).</p>\r\n\r\n<p>Financial requirement :&nbsp;You need to demonstrate that you and your partner meet the minimum income threshold, either through employment, self-employment, savings, or a combination of these.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>The amount depends on who you&rsquo;re applying for.</p>\r\n\r\n<p>Family member How much you need to earn per year before tax :</p>\r\n\r\n<ul>\r\n	<li>Just your spouse or partner &pound;18,600</li>\r\n	<li>Your spouse or partner and one child &pound;22,400</li>\r\n	<li>Each additional child &pound;2,400</li>\r\n</ul>\r\n\r\n<p>English language proficiency :&nbsp;In most cases, you&#39;ll need to prove your English language ability by passing an approved English language test.For all other applicants, valid evidence of his/her proficiency in the English language at the A1 level is required.</p>\r\n\r\n<p>Genuine relationship :&nbsp;You&#39;ll need to provide evidence to prove the genuineness of your relationship, including photos, communication records, joint bank accounts, and other supporting documents.</p>\r\n\r\n<p>Health and care requirements :&nbsp;You and your partner must meet certain health and character requirements, which may involve undergoing medical examinations and providing police clearance certificates.</p>\r\n\r\n<p>It&#39;s essential to consult with an immigration lawyer or advisor to ensure you meet all the specific requirements and to receive personalized guidance tailored to your situation. Regulations may vary depending on individual circumstances and any recent updates to immigration laws.</p>\r\n\r\n<p>Spouse visa refused :</p>\r\n\r\n<p>Here some common reason behind the refusal of UK spouse visa immigration:</p>\r\n\r\n<p>1. Inadequate Proof Of Your Relationship</p>\r\n\r\n<p>One of the most common reasons for a spouse visa refusal is the absence of adequate evidence to prove the authenticity of the association. The Home Office expects substantial proof that your connection with your UK partner is honest and ongoing. This can include photographs, communication transcripts (emails, texts, WhatsApp messages), joint financial documents, and testimonies from friends and family. The key is to provide comprehensive evidence that paints a clear picture of your relationship&rsquo;s authenticity.</p>\r\n\r\n<p>2. Failure To Meet The Financial Requirement</p>\r\n\r\n<p>The financial requirement for all family visas in the UK is&nbsp;&pound;29,000 as of April 11th 2024. This will once again rise to&nbsp;&pound;34,500 later in 2024, after which it will rise once again to &pound;38,700 by early 2025. The UK government often revises these financial thresholds.</p>\r\n\r\n<p>This threshold can increase if children are involved. Providing clear, accurate financial documents is essential. It&rsquo;s not enough to satisfy the economic criteria; you must also adequately prove it.</p>\r\n\r\n<p>If you want to know more information just contact us. Our expertise will provide you the information and guide you properly.</p>\r\n\r\n<p>Spouse visa curtailment after divorce :</p>\r\n\r\n<p>Typically, this visa is curtailed to a period of 60 days. This period is crucial as it gives you, the visa holder, time to consider your options and decide on the best course of action for yourself and any children involved.</p>\r\n\r\n<p>Notifying the Home office about the separation :</p>\r\n\r\n<p>To inform the Home Office, you have two options: email or post.</p>\r\n\r\n<p>Your notification needs to be detailed, encompassing specific personal information for both you and your ex-partner, including:</p>\r\n\r\n<ul>\r\n	<li>Full names and dates of birth.</li>\r\n	<li>Your current living address.</li>\r\n	<li>Passport numbers.</li>\r\n	<li>Any Home Office reference numbers associated with your cases.</li>\r\n</ul>\r\n\r\n<p>If children are involved, further details are necessary :</p>\r\n\r\n<ul>\r\n	<li>Children&rsquo;s names, dates of birth, and the names of their parents or guardians.</li>\r\n	<li>Their living arrangements, as well as any custody or visitation details.visa holder</li>\r\n	<li>Information about child maintenance, financial support, and any family court proceedings in progress.</li>\r\n</ul>\r\n\r\n<p>In addition to this, you are required to attach either a Public Statement or a Consent Form to your notification :</p>\r\n\r\n<ul>\r\n	<li>The Public Statement&nbsp;is chosen if you wish to keep the contents of your communication private from your ex-partner.</li>\r\n	<li>The Consent Form&nbsp;is for those who agree to the Home Office sharing the notification&rsquo;s details with the ex-partner.</li>\r\n</ul>\r\n\r\n<p>These forms must be properly filled, printed, scanned, emailed, or sent via post alongside your letter. This communication is a vital legal requirement and ensures that you follow the correct procedures to maintain or adjust your immigration status in the UK.</p>', '2024-07-04 03:06:44', '2024-07-07 03:31:48'),
+(2, 'Self Sponsor Visa', 'self-sponsor-visa', 1, '#52558a', '<p>Spouse visa application :</p>\r\n\r\n<p>Bringing families together is at the heart of what we do. Our immigration law firm specializes in helping couples navigate the complex process of obtaining spouse visas. We provide expert guidance to ensure your application is handled with care and precision.</p>\r\n\r\n<p>Personalized approach :&nbsp;We recognize that each case is unique, and we tailor our services to meet your specific needs and circumstance.</p>\r\n\r\n<p>Documentation preparation :&nbsp;Our team assists you in gathering and organizing the necessary documentation to support your application, ensuring nothing is overlooked.</p>\r\n\r\n<p>Application submission :&nbsp;We handle the entire application submission process on your behalf, ensuring all forms are completed accurately and submitted within the required timeframe.</p>\r\n\r\n<p>Spouse visa requirements :</p>\r\n\r\n<p>Here&rsquo;s some terms of requirements which is crucial for spouse visa:</p>\r\n\r\n<p>Relationship status :&nbsp;You must be legally married to or in a civil partnership with a British citizen or settled person (someone with indefinite leave to remain or permanent residency in the UK).</p>\r\n\r\n<p>Financial requirement :&nbsp;You need to demonstrate that you and your partner meet the minimum income threshold, either through employment, self-employment, savings, or a combination of these.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>The amount depends on who you&rsquo;re applying for.</p>\r\n\r\n<p>Family member How much you need to earn per year before tax :</p>\r\n\r\n<ul>\r\n	<li>Just your spouse or partner &pound;18,600</li>\r\n	<li>Your spouse or partner and one child &pound;22,400</li>\r\n	<li>Each additional child &pound;2,400</li>\r\n</ul>\r\n\r\n<p>English language proficiency :&nbsp;In most cases, you&#39;ll need to prove your English language ability by passing an approved English language test.For all other applicants, valid evidence of his/her proficiency in the English language at the A1 level is required.</p>\r\n\r\n<p>Genuine relationship :&nbsp;You&#39;ll need to provide evidence to prove the genuineness of your relationship, including photos, communication records, joint bank accounts, and other supporting documents.</p>\r\n\r\n<p>Health and care requirements :&nbsp;You and your partner must meet certain health and character requirements, which may involve undergoing medical examinations and providing police clearance certificates.</p>\r\n\r\n<p>It&#39;s essential to consult with an immigration lawyer or advisor to ensure you meet all the specific requirements and to receive personalized guidance tailored to your situation. Regulations may vary depending on individual circumstances and any recent updates to immigration laws.</p>\r\n\r\n<p>Spouse visa refused :</p>\r\n\r\n<p>Here some common reason behind the refusal of UK spouse visa immigration:</p>\r\n\r\n<p>1. Inadequate Proof Of Your Relationship</p>\r\n\r\n<p>One of the most common reasons for a spouse visa refusal is the absence of adequate evidence to prove the authenticity of the association. The Home Office expects substantial proof that your connection with your UK partner is honest and ongoing. This can include photographs, communication transcripts (emails, texts, WhatsApp messages), joint financial documents, and testimonies from friends and family. The key is to provide comprehensive evidence that paints a clear picture of your relationship&rsquo;s authenticity.</p>\r\n\r\n<p>2. Failure To Meet The Financial Requirement</p>\r\n\r\n<p>The financial requirement for all family visas in the UK is&nbsp;&pound;29,000 as of April 11th 2024. This will once again rise to&nbsp;&pound;34,500 later in 2024, after which it will rise once again to &pound;38,700 by early 2025. The UK government often revises these financial thresholds.</p>\r\n\r\n<p>This threshold can increase if children are involved. Providing clear, accurate financial documents is essential. It&rsquo;s not enough to satisfy the economic criteria; you must also adequately prove it.</p>\r\n\r\n<p>If you want to know more information just contact us. Our expertise will provide you the information and guide you properly.</p>\r\n\r\n<p>Spouse visa curtailment after divorce :</p>\r\n\r\n<p>Typically, this visa is curtailed to a period of 60 days. This period is crucial as it gives you, the visa holder, time to consider your options and decide on the best course of action for yourself and any children involved.</p>\r\n\r\n<p>Notifying the Home office about the separation :</p>\r\n\r\n<p>To inform the Home Office, you have two options: email or post.</p>\r\n\r\n<p>Your notification needs to be detailed, encompassing specific personal information for both you and your ex-partner, including:</p>\r\n\r\n<ul>\r\n	<li>Full names and dates of birth.</li>\r\n	<li>Your current living address.</li>\r\n	<li>Passport numbers.</li>\r\n	<li>Any Home Office reference numbers associated with your cases.</li>\r\n</ul>\r\n\r\n<p>If children are involved, further details are necessary :</p>\r\n\r\n<ul>\r\n	<li>Children&rsquo;s names, dates of birth, and the names of their parents or guardians.</li>\r\n	<li>Their living arrangements, as well as any custody or visitation details.visa holder</li>\r\n	<li>Information about child maintenance, financial support, and any family court proceedings in progress.</li>\r\n</ul>\r\n\r\n<p>In addition to this, you are required to attach either a Public Statement or a Consent Form to your notification :</p>\r\n\r\n<ul>\r\n	<li>The Public Statement&nbsp;is chosen if you wish to keep the contents of your communication private from your ex-partner.</li>\r\n	<li>The Consent Form&nbsp;is for those who agree to the Home Office sharing the notification&rsquo;s details with the ex-partner.</li>\r\n</ul>\r\n\r\n<p>These forms must be properly filled, printed, scanned, emailed, or sent via post alongside your letter. This communication is a vital legal requirement and ensures that you follow the correct procedures to maintain or adjust your immigration status in the UK.</p>', '2024-07-04 03:18:53', '2024-07-07 03:19:55'),
+(3, 'Family Visa', 'family-visa', 2, '#fdba55', '<p>Spouse visa application :</p>\r\n\r\n<p>Bringing families together is at the heart of what we do. Our immigration law firm specializes in helping couples navigate the complex process of obtaining spouse visas. We provide expert guidance to ensure your application is handled with care and precision.</p>\r\n\r\n<p>Personalized approach :&nbsp;We recognize that each case is unique, and we tailor our services to meet your specific needs and circumstance.</p>\r\n\r\n<p>Documentation preparation :&nbsp;Our team assists you in gathering and organizing the necessary documentation to support your application, ensuring nothing is overlooked.</p>\r\n\r\n<p>Application submission :&nbsp;We handle the entire application submission process on your behalf, ensuring all forms are completed accurately and submitted within the required timeframe.</p>\r\n\r\n<p>Spouse visa requirements :</p>\r\n\r\n<p>Here&rsquo;s some terms of requirements which is crucial for spouse visa:</p>\r\n\r\n<p>Relationship status :&nbsp;You must be legally married to or in a civil partnership with a British citizen or settled person (someone with indefinite leave to remain or permanent residency in the UK).</p>\r\n\r\n<p>Financial requirement :&nbsp;You need to demonstrate that you and your partner meet the minimum income threshold, either through employment, self-employment, savings, or a combination of these.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>You need to be earning a certain amount, or have enough savings, in order to bring your spouse or partner to the UK. This is called &lsquo;meeting the financial requirement&rsquo;.</p>\r\n\r\n<p>The amount depends on who you&rsquo;re applying for.</p>\r\n\r\n<p>Family member How much you need to earn per year before tax :</p>\r\n\r\n<ul>\r\n	<li>Just your spouse or partner &pound;18,600</li>\r\n	<li>Your spouse or partner and one child &pound;22,400</li>\r\n	<li>Each additional child &pound;2,400</li>\r\n</ul>\r\n\r\n<p>English language proficiency :&nbsp;In most cases, you&#39;ll need to prove your English language ability by passing an approved English language test.For all other applicants, valid evidence of his/her proficiency in the English language at the A1 level is required.</p>\r\n\r\n<p>Genuine relationship :&nbsp;You&#39;ll need to provide evidence to prove the genuineness of your relationship, including photos, communication records, joint bank accounts, and other supporting documents.</p>\r\n\r\n<p>Health and care requirements :&nbsp;You and your partner must meet certain health and character requirements, which may involve undergoing medical examinations and providing police clearance certificates.</p>\r\n\r\n<p>It&#39;s essential to consult with an immigration lawyer or advisor to ensure you meet all the specific requirements and to receive personalized guidance tailored to your situation. Regulations may vary depending on individual circumstances and any recent updates to immigration laws.</p>\r\n\r\n<p>Spouse visa refused :</p>\r\n\r\n<p>Here some common reason behind the refusal of UK spouse visa immigration:</p>\r\n\r\n<p>1. Inadequate Proof Of Your Relationship</p>\r\n\r\n<p>One of the most common reasons for a spouse visa refusal is the absence of adequate evidence to prove the authenticity of the association. The Home Office expects substantial proof that your connection with your UK partner is honest and ongoing. This can include photographs, communication transcripts (emails, texts, WhatsApp messages), joint financial documents, and testimonies from friends and family. The key is to provide comprehensive evidence that paints a clear picture of your relationship&rsquo;s authenticity.</p>\r\n\r\n<p>2. Failure To Meet The Financial Requirement</p>\r\n\r\n<p>The financial requirement for all family visas in the UK is&nbsp;&pound;29,000 as of April 11th 2024. This will once again rise to&nbsp;&pound;34,500 later in 2024, after which it will rise once again to &pound;38,700 by early 2025. The UK government often revises these financial thresholds.</p>\r\n\r\n<p>This threshold can increase if children are involved. Providing clear, accurate financial documents is essential. It&rsquo;s not enough to satisfy the economic criteria; you must also adequately prove it.</p>\r\n\r\n<p>If you want to know more information just contact us. Our expertise will provide you the information and guide you properly.</p>\r\n\r\n<p>Spouse visa curtailment after divorce :</p>\r\n\r\n<p>Typically, this visa is curtailed to a period of 60 days. This period is crucial as it gives you, the visa holder, time to consider your options and decide on the best course of action for yourself and any children involved.</p>\r\n\r\n<p>Notifying the Home office about the separation :</p>\r\n\r\n<p>To inform the Home Office, you have two options: email or post.</p>\r\n\r\n<p>Your notification needs to be detailed, encompassing specific personal information for both you and your ex-partner, including:</p>\r\n\r\n<ul>\r\n	<li>Full names and dates of birth.</li>\r\n	<li>Your current living address.</li>\r\n	<li>Passport numbers.</li>\r\n	<li>Any Home Office reference numbers associated with your cases.</li>\r\n</ul>\r\n\r\n<p>If children are involved, further details are necessary :</p>\r\n\r\n<ul>\r\n	<li>Children&rsquo;s names, dates of birth, and the names of their parents or guardians.</li>\r\n	<li>Their living arrangements, as well as any custody or visitation details.visa holder</li>\r\n	<li>Information about child maintenance, financial support, and any family court proceedings in progress.</li>\r\n</ul>\r\n\r\n<p>In addition to this, you are required to attach either a Public Statement or a Consent Form to your notification :</p>\r\n\r\n<ul>\r\n	<li>The Public Statement&nbsp;is chosen if you wish to keep the contents of your communication private from your ex-partner.</li>\r\n	<li>The Consent Form&nbsp;is for those who agree to the Home Office sharing the notification&rsquo;s details with the ex-partner.</li>\r\n</ul>\r\n\r\n<p>These forms must be properly filled, printed, scanned, emailed, or sent via post alongside your letter. This communication is a vital legal requirement and ensures that you follow the correct procedures to maintain or adjust your immigration status in the UK.</p>', '2024-07-04 03:19:33', '2024-07-07 03:21:25'),
+(4, 'bdfghfdgfd', 'bdfghfdgfd', 3, NULL, '<p>fdsfsdf</p>', '2024-07-05 19:19:16', '2024-07-05 19:19:16');
 
 -- --------------------------------------------------------
 
@@ -862,8 +826,8 @@ INSERT INTO `visa_manages` (`id`, `title`, `slug`, `type`, `bg_color`, `descript
 --
 
 CREATE TABLE `visa_manage_galleries` (
-  `id` bigint UNSIGNED NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -883,10 +847,10 @@ INSERT INTO `visa_manage_galleries` (`id`, `image`, `created_at`, `updated_at`) 
 --
 
 CREATE TABLE `visitor_counts` (
-  `id` bigint UNSIGNED NOT NULL,
-  `user_ip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `viewcount` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_ip` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `viewcount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -7682,363 +7646,7 @@ INSERT INTO `visitor_counts` (`id`, `user_ip`, `viewcount`, `status`, `created_a
 (6774, '127.0.0.1', '6', NULL, '2024-07-03 23:10:59', '2024-07-03 23:58:58'),
 (6775, '127.0.0.1', '2', NULL, '2024-07-05 13:50:21', '2024-07-05 13:52:25'),
 (6776, '127.0.0.1', '62', NULL, '2024-07-07 00:48:47', '2024-07-07 04:41:08'),
-(6777, '127.0.0.1', '18', NULL, '2024-07-08 00:21:32', '2024-07-08 15:27:57'),
-(6778, '103.188.136.17', '3', NULL, '2024-08-31 23:58:00', '2024-08-31 23:59:06'),
-(6779, '18.195.64.182', '1', NULL, '2024-09-01 04:07:06', '2024-09-01 04:07:06'),
-(6780, '18.135.28.100', '1', NULL, '2024-09-01 04:53:26', '2024-09-01 04:53:26'),
-(6781, '95.108.213.206', '1', NULL, '2024-09-01 12:25:10', '2024-09-01 12:25:10'),
-(6782, '103.227.176.14', '1', NULL, '2024-09-01 15:30:47', '2024-09-01 15:30:47'),
-(6783, '93.158.71.185', '1', NULL, '2024-09-01 18:00:19', '2024-09-01 18:00:19'),
-(6784, '114.119.141.80', '1', NULL, '2024-09-01 18:05:09', '2024-09-01 18:05:09'),
-(6785, '17.241.75.149', '1', NULL, '2024-09-01 18:47:31', '2024-09-01 18:47:31'),
-(6786, '173.252.107.112', '1', NULL, '2024-09-01 19:41:57', '2024-09-01 19:41:57'),
-(6787, '66.249.68.36', '1', NULL, '2024-09-01 21:54:03', '2024-09-01 21:54:03'),
-(6788, '66.249.66.14', '1', NULL, '2024-09-02 03:58:26', '2024-09-02 03:58:26'),
-(6789, '31.13.127.10', '1', NULL, '2024-09-02 05:36:43', '2024-09-02 05:36:43'),
-(6790, '216.24.213.184', '1', NULL, '2024-09-02 10:03:03', '2024-09-02 10:03:03'),
-(6791, '149.28.253.143', '1', NULL, '2024-09-02 12:01:04', '2024-09-02 12:01:04'),
-(6792, '66.249.68.39', '2', NULL, '2024-09-02 14:35:46', '2024-09-02 14:43:17'),
-(6793, '66.249.68.37', '2', NULL, '2024-09-02 14:44:23', '2024-09-02 14:44:23'),
-(6794, '149.28.106.248', '1', NULL, '2024-09-02 15:29:00', '2024-09-02 15:29:00'),
-(6795, '173.252.87.112', '1', NULL, '2024-09-02 15:49:00', '2024-09-02 15:49:00'),
-(6796, '3.249.138.188', '1', NULL, '2024-09-02 20:52:52', '2024-09-02 20:52:52'),
-(6797, '17.241.227.176', '1', NULL, '2024-09-02 22:33:40', '2024-09-02 22:33:40'),
-(6798, '141.164.42.63', '1', NULL, '2024-09-03 03:05:33', '2024-09-03 03:05:33'),
-(6799, '66.249.68.35', '1', NULL, '2024-09-03 06:35:23', '2024-09-03 06:35:23'),
-(6800, '66.249.68.36', '1', NULL, '2024-09-03 07:39:23', '2024-09-03 07:39:23'),
-(6801, '144.202.37.218', '1', NULL, '2024-09-03 09:16:05', '2024-09-03 09:16:05'),
-(6802, '54.36.148.191', '1', NULL, '2024-09-03 10:07:01', '2024-09-03 10:07:01'),
-(6803, '178.171.38.8', '1', NULL, '2024-09-03 17:51:25', '2024-09-03 17:51:25'),
-(6804, '178.171.40.222', '1', NULL, '2024-09-03 18:04:49', '2024-09-03 18:04:49'),
-(6805, '94.247.172.129', '1', NULL, '2024-09-03 22:30:01', '2024-09-03 22:30:01'),
-(6806, '89.111.241.253', '1', NULL, '2024-09-04 02:42:22', '2024-09-04 02:42:22'),
-(6807, '17.241.75.81', '1', NULL, '2024-09-04 04:14:34', '2024-09-04 04:14:34'),
-(6808, '5.133.192.88', '1', NULL, '2024-09-04 05:39:00', '2024-09-04 05:39:00'),
-(6809, '173.252.79.9', '1', NULL, '2024-09-04 09:50:23', '2024-09-04 09:50:23'),
-(6810, '103.227.176.14', '1', NULL, '2024-09-04 09:59:38', '2024-09-04 09:59:38'),
-(6811, '50.236.66.130', '1', NULL, '2024-09-05 00:01:16', '2024-09-05 00:01:16'),
-(6812, '5.9.139.98', '1', NULL, '2024-09-05 00:02:03', '2024-09-05 00:02:03'),
-(6813, '66.249.70.164', '1', NULL, '2024-09-05 02:25:10', '2024-09-05 02:25:10'),
-(6814, '139.84.226.251', '1', NULL, '2024-09-05 05:09:04', '2024-09-05 05:09:04'),
-(6815, '192.177.116.110', '1', NULL, '2024-09-05 05:18:00', '2024-09-05 05:18:00'),
-(6816, '104.238.146.224', '1', NULL, '2024-09-05 07:42:44', '2024-09-05 07:42:44'),
-(6817, '66.249.66.13', '1', NULL, '2024-09-05 10:17:53', '2024-09-05 10:17:53'),
-(6818, '173.252.79.3', '1', NULL, '2024-09-05 10:59:10', '2024-09-05 10:59:10'),
-(6819, '3.252.92.61', '1', NULL, '2024-09-05 15:33:04', '2024-09-05 15:33:04'),
-(6820, '13.36.166.79', '1', NULL, '2024-09-05 19:51:50', '2024-09-05 19:51:50'),
-(6821, '213.180.203.166', '1', NULL, '2024-09-05 20:13:44', '2024-09-05 20:13:44'),
-(6822, '3.255.114.126', '1', NULL, '2024-09-05 20:14:04', '2024-09-05 20:14:04'),
-(6823, '191.101.209.156', '1', NULL, '2024-09-05 21:47:21', '2024-09-05 21:47:21'),
-(6824, '178.254.29.124', '1', NULL, '2024-09-05 22:35:01', '2024-09-05 22:35:01'),
-(6825, '127.0.0.1', '1', NULL, '2024-09-05 23:57:51', '2024-09-05 23:57:51'),
-(6826, '66.249.66.14', '1', NULL, '2024-09-06 01:59:11', '2024-09-06 01:59:11'),
-(6827, '67.219.98.243', '1', NULL, '2024-09-06 05:17:35', '2024-09-06 05:17:35'),
-(6828, '23.83.81.173', '1', NULL, '2024-09-06 08:51:10', '2024-09-06 08:51:10'),
-(6829, '173.252.87.114', '1', NULL, '2024-09-06 09:43:57', '2024-09-06 09:43:57'),
-(6830, '158.247.225.51', '1', NULL, '2024-09-06 10:38:20', '2024-09-06 10:38:20'),
-(6831, '66.249.68.38', '1', NULL, '2024-09-06 16:46:02', '2024-09-06 16:46:02'),
-(6832, '54.183.3.242', '1', NULL, '2024-09-06 20:06:51', '2024-09-06 20:06:51'),
-(6833, '162.19.83.218', '1', NULL, '2024-09-06 22:06:14', '2024-09-06 22:06:14'),
-(6834, '68.183.36.57', '2', NULL, '2024-09-07 00:11:48', '2024-09-07 00:11:49'),
-(6835, '159.203.181.173', '1', NULL, '2024-09-07 01:25:06', '2024-09-07 01:25:06'),
-(6836, '34.242.224.230', '1', NULL, '2024-09-07 01:30:29', '2024-09-07 01:30:29'),
-(6837, '161.97.156.209', '1', NULL, '2024-09-07 07:59:36', '2024-09-07 07:59:36'),
-(6838, '189.44.46.42', '1', NULL, '2024-09-07 11:55:04', '2024-09-07 11:55:04'),
-(6839, '130.255.166.166', '1', NULL, '2024-09-07 14:23:49', '2024-09-07 14:23:49'),
-(6840, '162.253.129.172', '1', NULL, '2024-09-07 22:52:21', '2024-09-07 22:52:21'),
-(6841, '176.9.106.30', '2', NULL, '2024-09-08 00:01:59', '2024-09-08 08:02:02'),
-(6842, '167.99.81.219', '2', NULL, '2024-09-08 06:15:21', '2024-09-08 06:15:22'),
-(6843, '54.200.34.239', '1', NULL, '2024-09-08 07:04:26', '2024-09-08 07:04:26'),
-(6844, '45.32.138.147', '1', NULL, '2024-09-08 07:50:43', '2024-09-08 07:50:43'),
-(6845, '103.227.176.14', '1', NULL, '2024-09-08 09:56:37', '2024-09-08 09:56:37'),
-(6846, '2.57.122.205', '3', NULL, '2024-09-08 10:11:02', '2024-09-08 10:11:07'),
-(6847, '149.28.214.87', '1', NULL, '2024-09-08 10:45:26', '2024-09-08 10:45:26');
-INSERT INTO `visitor_counts` (`id`, `user_ip`, `viewcount`, `status`, `created_at`, `updated_at`) VALUES
-(6848, '213.180.203.108', '1', NULL, '2024-09-08 11:10:31', '2024-09-08 11:10:31'),
-(6849, '185.220.101.1', '1', NULL, '2024-09-08 15:46:20', '2024-09-08 15:46:20'),
-(6850, '178.62.74.6', '1', NULL, '2024-09-08 16:28:19', '2024-09-08 16:28:19'),
-(6851, '66.249.68.39', '1', NULL, '2024-09-08 16:45:28', '2024-09-08 16:45:28'),
-(6852, '66.249.68.38', '1', NULL, '2024-09-08 20:09:40', '2024-09-08 20:09:40'),
-(6853, '130.44.200.3', '1', NULL, '2024-09-08 20:59:20', '2024-09-08 20:59:20'),
-(6854, '114.119.143.77', '1', NULL, '2024-09-08 21:37:21', '2024-09-08 21:37:21'),
-(6855, '34.1.31.111', '1', NULL, '2024-09-09 00:34:52', '2024-09-09 00:34:52'),
-(6856, '220.247.128.178', '1', NULL, '2024-09-09 01:16:58', '2024-09-09 01:16:58'),
-(6857, '54.214.131.100', '1', NULL, '2024-09-09 01:27:43', '2024-09-09 01:27:43'),
-(6858, '64.176.7.183', '1', NULL, '2024-09-09 05:17:43', '2024-09-09 05:17:43'),
-(6859, '66.249.66.14', '1', NULL, '2024-09-09 05:45:27', '2024-09-09 05:45:27'),
-(6860, '216.238.75.213', '1', NULL, '2024-09-09 08:26:41', '2024-09-09 08:26:41'),
-(6861, '51.195.193.154', '1', NULL, '2024-09-09 11:45:45', '2024-09-09 11:45:45'),
-(6862, '104.28.157.115', '1', NULL, '2024-09-09 12:35:11', '2024-09-09 12:35:11'),
-(6863, '5.146.248.193', '1', NULL, '2024-09-10 01:17:59', '2024-09-10 01:17:59'),
-(6864, '67.205.177.228', '2', NULL, '2024-09-10 07:33:32', '2024-09-10 07:33:33'),
-(6865, '5.133.192.108', '1', NULL, '2024-09-10 08:44:18', '2024-09-10 08:44:18'),
-(6866, '66.249.77.6', '1', NULL, '2024-09-10 10:29:03', '2024-09-10 10:29:03'),
-(6867, '31.13.103.1', '1', NULL, '2024-09-10 14:04:23', '2024-09-10 14:04:23'),
-(6868, '31.13.103.9', '1', NULL, '2024-09-10 14:04:23', '2024-09-10 14:04:23'),
-(6869, '49.181.239.234', '1', NULL, '2024-09-10 15:45:43', '2024-09-10 15:45:43'),
-(6870, '66.249.77.5', '1', NULL, '2024-09-10 16:35:16', '2024-09-10 16:35:16'),
-(6871, '66.249.68.37', '1', NULL, '2024-09-10 16:35:34', '2024-09-10 16:35:34'),
-(6872, '142.93.138.170', '2', NULL, '2024-09-11 02:03:04', '2024-09-11 02:03:05'),
-(6873, '101.47.17.220', '1', NULL, '2024-09-11 02:52:02', '2024-09-11 02:52:02'),
-(6874, '149.28.193.168', '1', NULL, '2024-09-11 04:05:18', '2024-09-11 04:05:18'),
-(6875, '85.215.161.43', '1', NULL, '2024-09-11 06:06:28', '2024-09-11 06:06:28'),
-(6876, '45.32.171.65', '1', NULL, '2024-09-11 06:31:19', '2024-09-11 06:31:19'),
-(6877, '124.220.171.131', '1', NULL, '2024-09-11 10:46:10', '2024-09-11 10:46:10'),
-(6878, '127.0.0.1', '1', NULL, '2024-09-11 11:18:06', '2024-09-11 11:18:06'),
-(6879, '103.227.176.14', '1', NULL, '2024-09-11 14:20:01', '2024-09-11 14:20:01'),
-(6880, '213.180.203.49', '1', NULL, '2024-09-11 16:42:16', '2024-09-11 16:42:16'),
-(6881, '35.93.37.195', '1', NULL, '2024-09-11 20:15:32', '2024-09-11 20:15:32'),
-(6882, '35.180.172.95', '1', NULL, '2024-09-11 22:28:22', '2024-09-11 22:28:22'),
-(6883, '173.252.87.114', '1', NULL, '2024-09-12 00:25:47', '2024-09-12 00:25:47'),
-(6884, '57.141.3.4', '1', NULL, '2024-09-12 03:05:58', '2024-09-12 03:05:58'),
-(6885, '57.141.3.15', '1', NULL, '2024-09-12 08:52:53', '2024-09-12 08:52:53'),
-(6886, '72.13.46.6', '1', NULL, '2024-09-12 10:45:58', '2024-09-12 10:45:58'),
-(6887, '45.76.202.141', '1', NULL, '2024-09-12 11:48:38', '2024-09-12 11:48:38'),
-(6888, '44.242.175.80', '1', NULL, '2024-09-12 12:00:53', '2024-09-12 12:00:53'),
-(6889, '66.42.81.135', '1', NULL, '2024-09-12 12:55:47', '2024-09-12 12:55:47'),
-(6890, '51.255.196.88', '1', NULL, '2024-09-12 13:47:35', '2024-09-12 13:47:35'),
-(6891, '46.228.199.158', '1', NULL, '2024-09-12 14:07:02', '2024-09-12 14:07:02'),
-(6892, '66.249.66.14', '1', NULL, '2024-09-12 21:28:38', '2024-09-12 21:28:38'),
-(6893, '108.61.86.20', '1', NULL, '2024-09-12 23:35:31', '2024-09-12 23:35:31'),
-(6894, '182.4.196.45', '1', NULL, '2024-09-13 04:13:58', '2024-09-13 04:13:58'),
-(6895, '5.133.192.200', '1', NULL, '2024-09-13 07:50:27', '2024-09-13 07:50:27'),
-(6896, '124.156.180.20', '1', NULL, '2024-09-13 09:59:57', '2024-09-13 09:59:57'),
-(6897, '102.129.143.35', '1', NULL, '2024-09-13 11:38:38', '2024-09-13 11:38:38'),
-(6898, '85.209.11.117', '1', NULL, '2024-09-13 16:20:34', '2024-09-13 16:20:34'),
-(6899, '178.128.153.13', '2', NULL, '2024-09-13 17:48:54', '2024-09-13 17:48:56'),
-(6900, '54.215.223.19', '1', NULL, '2024-09-13 18:02:17', '2024-09-13 18:02:17'),
-(6901, '34.205.50.227', '1', NULL, '2024-09-13 19:54:56', '2024-09-13 19:54:56'),
-(6902, '66.249.73.37', '1', NULL, '2024-09-13 20:34:12', '2024-09-13 20:34:12'),
-(6903, '66.249.73.39', '1', NULL, '2024-09-13 20:34:13', '2024-09-13 20:34:13'),
-(6904, '103.124.251.189', '1', NULL, '2024-09-13 23:11:27', '2024-09-13 23:11:27'),
-(6905, '45.250.228.126', '1', NULL, '2024-09-13 23:27:41', '2024-09-13 23:27:41'),
-(6906, '173.252.107.116', '1', NULL, '2024-09-14 03:14:34', '2024-09-14 03:14:34'),
-(6907, '43.153.35.122', '2', NULL, '2024-09-14 03:20:36', '2024-09-14 03:20:36'),
-(6908, '209.145.61.251', '1', NULL, '2024-09-14 03:29:44', '2024-09-14 03:29:44'),
-(6909, '66.249.77.6', '1', NULL, '2024-09-14 03:42:28', '2024-09-14 03:42:28'),
-(6910, '13.39.156.37', '1', NULL, '2024-09-14 09:46:22', '2024-09-14 09:46:22'),
-(6911, '155.138.229.225', '1', NULL, '2024-09-14 09:59:01', '2024-09-14 09:59:01'),
-(6912, '140.82.62.176', '1', NULL, '2024-09-14 12:07:03', '2024-09-14 12:07:03'),
-(6913, '54.36.148.143', '1', NULL, '2024-09-14 15:34:54', '2024-09-14 15:34:54'),
-(6914, '114.119.165.200', '1', NULL, '2024-09-14 18:17:51', '2024-09-14 18:17:51'),
-(6915, '3.234.210.82', '1', NULL, '2024-09-14 19:52:50', '2024-09-14 19:52:50'),
-(6916, '3.239.89.23', '1', NULL, '2024-09-14 19:52:50', '2024-09-14 19:52:50'),
-(6917, '137.184.226.226', '1', NULL, '2024-09-14 19:52:55', '2024-09-14 19:52:55'),
-(6918, '94.130.200.133', '1', NULL, '2024-09-15 00:01:48', '2024-09-15 00:01:48'),
-(6919, '57.141.3.27', '1', NULL, '2024-09-15 02:21:16', '2024-09-15 02:21:16'),
-(6920, '92.255.85.164', '1', NULL, '2024-09-15 02:28:29', '2024-09-15 02:28:29'),
-(6921, '144.217.135.147', '3', NULL, '2024-09-15 07:32:06', '2024-09-15 07:32:19'),
-(6922, '149.56.160.170', '1', NULL, '2024-09-15 07:33:07', '2024-09-15 07:33:07'),
-(6923, '66.249.68.38', '1', NULL, '2024-09-15 08:40:52', '2024-09-15 08:40:52'),
-(6924, '103.227.176.14', '1', NULL, '2024-09-15 10:21:15', '2024-09-15 10:21:15'),
-(6925, '17.241.75.115', '1', NULL, '2024-09-15 10:46:35', '2024-09-15 10:46:35'),
-(6926, '45.151.136.85', '1', NULL, '2024-09-15 15:06:54', '2024-09-15 15:06:54'),
-(6927, '173.252.107.113', '1', NULL, '2024-09-15 15:41:12', '2024-09-15 15:41:12'),
-(6928, '197.245.229.203', '1', NULL, '2024-09-15 18:01:35', '2024-09-15 18:01:35'),
-(6929, '66.249.68.38', '1', NULL, '2024-09-15 18:32:19', '2024-09-15 18:32:19'),
-(6930, '69.171.231.9', '1', NULL, '2024-09-15 20:49:21', '2024-09-15 20:49:21'),
-(6931, '103.91.232.3', '1', NULL, '2024-09-15 20:49:21', '2024-09-15 20:49:21'),
-(6932, '77.74.177.118', '1', NULL, '2024-09-15 21:46:15', '2024-09-15 21:46:15'),
-(6933, '17.241.219.94', '1', NULL, '2024-09-16 04:07:04', '2024-09-16 04:07:04'),
-(6934, '45.118.70.217', '1', NULL, '2024-09-16 10:36:39', '2024-09-16 10:36:39'),
-(6935, '163.53.140.70', '1', NULL, '2024-09-16 10:36:40', '2024-09-16 10:36:40'),
-(6936, '93.158.91.24', '1', NULL, '2024-09-16 12:16:25', '2024-09-16 12:16:25'),
-(6937, '17.241.227.18', '1', NULL, '2024-09-16 15:30:47', '2024-09-16 15:30:47'),
-(6938, '45.148.10.201', '1', NULL, '2024-09-16 15:53:45', '2024-09-16 15:53:45'),
-(6939, '34.86.63.121', '1', NULL, '2024-09-16 17:53:24', '2024-09-16 17:53:24'),
-(6940, '35.193.178.30', '5', NULL, '2024-09-16 17:55:43', '2024-09-16 17:55:46'),
-(6941, '35.193.178.30', '5', NULL, '2024-09-16 17:55:43', '2024-09-16 17:55:46'),
-(6942, '138.229.96.96', '2', NULL, '2024-09-16 18:34:50', '2024-09-16 18:34:51'),
-(6943, '35.226.0.204', '6', NULL, '2024-09-16 19:11:09', '2024-09-16 19:11:12'),
-(6944, '31.13.115.2', '2', NULL, '2024-09-16 23:09:56', '2024-09-16 23:09:56'),
-(6945, '45.32.136.5', '1', NULL, '2024-09-17 05:11:25', '2024-09-17 05:11:25'),
-(6946, '173.252.79.10', '1', NULL, '2024-09-17 05:24:17', '2024-09-17 05:24:17'),
-(6947, '69.171.251.14', '1', NULL, '2024-09-17 05:24:19', '2024-09-17 05:24:19'),
-(6948, '69.171.249.58', '1', NULL, '2024-09-17 05:24:53', '2024-09-17 05:24:53'),
-(6949, '17.241.219.195', '1', NULL, '2024-09-17 05:56:32', '2024-09-17 05:56:32'),
-(6950, '144.202.34.21', '1', NULL, '2024-09-17 08:02:31', '2024-09-17 08:02:31'),
-(6951, '57.141.3.10', '1', NULL, '2024-09-18 03:01:59', '2024-09-18 03:01:59'),
-(6952, '144.202.67.122', '1', NULL, '2024-09-18 04:12:41', '2024-09-18 04:12:41'),
-(6953, '110.172.98.2', '1', NULL, '2024-09-18 05:00:50', '2024-09-18 05:00:50'),
-(6954, '66.249.66.15', '1', NULL, '2024-09-18 10:24:18', '2024-09-18 10:24:18'),
-(6955, '103.227.176.14', '1', NULL, '2024-09-18 13:50:49', '2024-09-18 13:50:49'),
-(6956, '175.44.42.175', '1', NULL, '2024-09-18 15:13:35', '2024-09-18 15:13:35'),
-(6957, '27.147.200.164', '1', NULL, '2024-09-18 18:01:34', '2024-09-18 18:01:34'),
-(6958, '118.179.39.102', '1', NULL, '2024-09-19 00:05:20', '2024-09-19 00:05:20'),
-(6959, '66.249.66.15', '1', NULL, '2024-09-19 01:44:05', '2024-09-19 01:44:05'),
-(6960, '45.32.128.241', '1', NULL, '2024-09-19 02:58:33', '2024-09-19 02:58:33'),
-(6961, '118.179.94.173', '1', NULL, '2024-09-19 04:30:36', '2024-09-19 04:30:36'),
-(6962, '34.45.215.29', '2', NULL, '2024-09-19 06:16:30', '2024-09-19 06:16:32'),
-(6963, '182.252.78.18', '1', NULL, '2024-09-19 10:01:42', '2024-09-19 10:01:42'),
-(6964, '157.173.122.176', '1', NULL, '2024-09-19 11:58:22', '2024-09-19 11:58:22'),
-(6965, '69.171.249.113', '1', NULL, '2024-09-19 16:21:43', '2024-09-19 16:21:43'),
-(6966, '101.67.29.200', '1', NULL, '2024-09-19 19:15:18', '2024-09-19 19:15:18'),
-(6967, '152.89.198.68', '1', NULL, '2024-09-19 20:36:15', '2024-09-19 20:36:15'),
-(6968, '13.37.234.15', '1', NULL, '2024-09-20 03:01:09', '2024-09-20 03:01:09'),
-(6969, '136.243.228.195', '1', NULL, '2024-09-20 05:05:06', '2024-09-20 05:05:06'),
-(6970, '45.77.161.192', '1', NULL, '2024-09-20 09:11:41', '2024-09-20 09:11:41'),
-(6971, '144.202.101.206', '1', NULL, '2024-09-20 12:14:10', '2024-09-20 12:14:10'),
-(6972, '54.241.140.196', '1', NULL, '2024-09-20 17:53:37', '2024-09-20 17:53:37'),
-(6973, '66.249.68.38', '1', NULL, '2024-09-20 19:08:35', '2024-09-20 19:08:35'),
-(6974, '31.13.103.4', '1', NULL, '2024-09-20 19:41:24', '2024-09-20 19:41:24'),
-(6975, '63.134.154.60', '1', NULL, '2024-09-20 21:33:35', '2024-09-20 21:33:35'),
-(6976, '66.249.68.37', '3', NULL, '2024-09-21 00:47:02', '2024-09-21 00:47:15'),
-(6977, '57.141.3.25', '1', NULL, '2024-09-21 03:24:41', '2024-09-21 03:24:41'),
-(6978, '209.38.47.205', '2', NULL, '2024-09-21 04:03:56', '2024-09-21 04:03:57'),
-(6979, '69.171.230.113', '1', NULL, '2024-09-21 04:46:51', '2024-09-21 04:46:51'),
-(6980, '173.252.79.115', '1', NULL, '2024-09-21 09:36:00', '2024-09-21 09:36:00'),
-(6981, '66.249.66.15', '1', NULL, '2024-09-21 11:19:48', '2024-09-21 11:19:48'),
-(6982, '199.244.88.221', '1', NULL, '2024-09-21 12:00:23', '2024-09-21 12:00:23'),
-(6983, '66.249.68.37', '1', NULL, '2024-09-21 17:40:14', '2024-09-21 17:40:14'),
-(6984, '93.158.91.252', '1', NULL, '2024-09-21 17:55:57', '2024-09-21 17:55:57'),
-(6985, '113.11.89.110', '4', NULL, '2024-09-21 23:10:13', '2024-09-21 23:49:39'),
-(6986, '103.112.206.111', '7', NULL, '2024-09-21 23:46:45', '2024-09-22 00:43:32'),
-(6987, '173.252.83.115', '1', NULL, '2024-09-22 00:26:20', '2024-09-22 00:26:20'),
-(6988, '65.20.112.74', '1', NULL, '2024-09-22 09:04:48', '2024-09-22 09:04:48'),
-(6989, '149.28.166.227', '1', NULL, '2024-09-22 12:50:08', '2024-09-22 12:50:08'),
-(6990, '93.158.91.32', '1', NULL, '2024-09-22 16:00:59', '2024-09-22 16:00:59'),
-(6991, '103.227.176.14', '1', NULL, '2024-09-22 16:04:10', '2024-09-22 16:04:10'),
-(6992, '152.89.198.68', '1', NULL, '2024-09-22 17:49:27', '2024-09-22 17:49:27'),
-(6993, '69.171.249.35', '1', NULL, '2024-09-22 18:18:13', '2024-09-22 18:18:13'),
-(6994, '171.41.151.229', '1', NULL, '2024-09-22 18:55:16', '2024-09-22 18:55:16'),
-(6995, '127.0.0.1', '1', NULL, '2024-09-23 04:09:56', '2024-09-23 04:09:56'),
-(6996, '173.252.95.115', '1', NULL, '2024-09-23 07:00:18', '2024-09-23 07:00:18'),
-(6997, '94.130.200.133', '1', NULL, '2024-09-23 16:01:54', '2024-09-23 16:01:54'),
-(6998, '54.37.76.179', '1', NULL, '2024-09-23 19:11:05', '2024-09-23 19:11:05'),
-(6999, '37.139.53.191', '2', NULL, '2024-09-23 21:05:31', '2024-09-23 21:05:34'),
-(7000, '114.119.130.213', '1', NULL, '2024-09-23 21:36:33', '2024-09-23 21:36:33'),
-(7001, '54.36.148.15', '1', NULL, '2024-09-23 23:06:31', '2024-09-23 23:06:31'),
-(7002, '67.220.95.165', '1', NULL, '2024-09-24 03:03:11', '2024-09-24 03:03:11'),
-(7003, '66.220.149.9', '1', NULL, '2024-09-24 03:15:56', '2024-09-24 03:15:56'),
-(7004, '205.169.39.80', '2', NULL, '2024-09-24 05:21:23', '2024-09-24 05:21:30'),
-(7005, '205.169.39.162', '2', NULL, '2024-09-24 05:21:47', '2024-09-24 05:21:59'),
-(7006, '54.247.57.72', '6', NULL, '2024-09-24 05:30:10', '2024-09-24 05:30:35'),
-(7007, '194.127.199.77', '1', NULL, '2024-09-24 05:45:10', '2024-09-24 05:45:10'),
-(7008, '104.248.132.204', '2', NULL, '2024-09-24 05:59:32', '2024-09-24 05:59:33'),
-(7009, '66.249.66.15', '1', NULL, '2024-09-24 06:19:04', '2024-09-24 06:19:04'),
-(7010, '66.249.66.14', '1', NULL, '2024-09-24 06:19:48', '2024-09-24 06:19:48'),
-(7011, '66.249.66.13', '2', NULL, '2024-09-24 06:19:49', '2024-09-24 06:19:49'),
-(7012, '66.115.189.155', '1', NULL, '2024-09-24 06:48:26', '2024-09-24 06:48:26'),
-(7013, '205.169.39.30', '1', NULL, '2024-09-24 06:50:44', '2024-09-24 06:50:44'),
-(7014, '205.169.39.1', '1', NULL, '2024-09-24 06:51:58', '2024-09-24 06:51:58'),
-(7015, '124.108.49.19', '1', NULL, '2024-09-24 12:09:31', '2024-09-24 12:09:31'),
-(7016, '176.53.223.255', '1', NULL, '2024-09-24 14:58:33', '2024-09-24 14:58:33'),
-(7017, '176.53.221.98', '1', NULL, '2024-09-24 15:04:25', '2024-09-24 15:04:25'),
-(7018, '176.53.220.86', '1', NULL, '2024-09-24 15:17:54', '2024-09-24 15:17:54'),
-(7019, '104.28.220.173', '1', NULL, '2024-09-24 16:07:27', '2024-09-24 16:07:27'),
-(7020, '144.126.195.32', '2', NULL, '2024-09-24 18:19:59', '2024-09-24 18:20:01'),
-(7021, '66.249.66.15', '1', NULL, '2024-09-24 20:33:32', '2024-09-24 20:33:32'),
-(7022, '62.141.44.236', '1', NULL, '2024-09-25 00:03:00', '2024-09-25 00:03:00'),
-(7023, '17.241.227.247', '1', NULL, '2024-09-25 02:14:33', '2024-09-25 02:14:33'),
-(7024, '173.252.79.6', '1', NULL, '2024-09-25 04:35:29', '2024-09-25 04:35:29'),
-(7025, '199.244.88.227', '1', NULL, '2024-09-25 05:40:09', '2024-09-25 05:40:09'),
-(7026, '89.169.34.140', '1', NULL, '2024-09-25 09:30:02', '2024-09-25 09:30:02'),
-(7027, '89.169.34.140', '1', NULL, '2024-09-25 09:30:02', '2024-09-25 09:30:02'),
-(7028, '65.20.77.123', '1', NULL, '2024-09-25 09:43:51', '2024-09-25 09:43:51'),
-(7029, '103.227.176.14', '1', NULL, '2024-09-25 09:56:34', '2024-09-25 09:56:34'),
-(7030, '108.160.138.47', '1', NULL, '2024-09-25 13:09:31', '2024-09-25 13:09:31'),
-(7031, '89.104.111.217', '1', NULL, '2024-09-25 14:27:04', '2024-09-25 14:27:04'),
-(7032, '176.53.218.72', '1', NULL, '2024-09-25 14:31:32', '2024-09-25 14:31:32'),
-(7033, '45.90.62.97', '1', NULL, '2024-09-25 14:44:25', '2024-09-25 14:44:25'),
-(7034, '173.252.87.14', '1', NULL, '2024-09-25 17:08:23', '2024-09-25 17:08:23'),
-(7035, '64.225.53.143', '2', NULL, '2024-09-25 22:44:38', '2024-09-25 22:44:40'),
-(7036, '165.227.66.95', '2', NULL, '2024-09-25 22:58:01', '2024-09-25 22:58:02'),
-(7037, '54.213.193.173', '2', NULL, '2024-09-26 02:14:26', '2024-09-26 02:14:30'),
-(7038, '54.245.72.25', '4', NULL, '2024-09-26 02:14:30', '2024-09-26 02:14:34'),
-(7039, '157.55.39.201', '1', NULL, '2024-09-26 04:57:04', '2024-09-26 04:57:04'),
-(7040, '198.199.89.11', '2', NULL, '2024-09-26 06:01:30', '2024-09-26 06:01:32'),
-(7041, '138.36.236.121', '1', NULL, '2024-09-26 08:21:17', '2024-09-26 08:21:17'),
-(7042, '15.204.206.70', '1', NULL, '2024-09-26 14:10:09', '2024-09-26 14:10:09'),
-(7043, '176.53.222.55', '1', NULL, '2024-09-26 14:21:46', '2024-09-26 14:21:46'),
-(7044, '45.90.62.67', '1', NULL, '2024-09-26 14:23:26', '2024-09-26 14:23:26'),
-(7045, '176.53.216.59', '1', NULL, '2024-09-26 14:35:43', '2024-09-26 14:35:43'),
-(7046, '17.241.75.112', '1', NULL, '2024-09-26 18:39:56', '2024-09-26 18:39:56'),
-(7047, '103.152.34.247', '1', NULL, '2024-09-27 03:45:43', '2024-09-27 03:45:43'),
-(7048, '34.96.44.12', '1', NULL, '2024-09-27 08:33:55', '2024-09-27 08:33:55'),
-(7049, '103.55.242.254', '1', NULL, '2024-09-27 08:34:03', '2024-09-27 08:34:03'),
-(7050, '104.238.165.166', '1', NULL, '2024-09-27 10:06:52', '2024-09-27 10:06:52'),
-(7051, '104.152.52.71', '1', NULL, '2024-09-27 10:54:46', '2024-09-27 10:54:46'),
-(7052, '92.255.85.164', '1', NULL, '2024-09-27 13:05:26', '2024-09-27 13:05:26'),
-(7053, '149.28.207.126', '1', NULL, '2024-09-27 13:25:16', '2024-09-27 13:25:16'),
-(7054, '85.208.96.199', '1', NULL, '2024-09-27 13:32:04', '2024-09-27 13:32:04'),
-(7055, '130.255.163.47', '1', NULL, '2024-09-27 13:44:09', '2024-09-27 13:44:09'),
-(7056, '178.128.234.100', '2', NULL, '2024-09-27 21:46:49', '2024-09-27 21:46:52'),
-(7057, '157.245.43.229', '2', NULL, '2024-09-27 22:56:17', '2024-09-27 22:56:18'),
-(7058, '147.182.251.80', '2', NULL, '2024-09-27 23:29:25', '2024-09-27 23:29:26'),
-(7059, '104.248.88.157', '2', NULL, '2024-09-28 05:58:58', '2024-09-28 05:58:59'),
-(7060, '45.76.231.74', '1', NULL, '2024-09-28 07:52:45', '2024-09-28 07:52:45'),
-(7061, '37.19.223.206', '1', NULL, '2024-09-28 10:15:24', '2024-09-28 10:15:24'),
-(7062, '64.176.218.52', '1', NULL, '2024-09-28 11:00:06', '2024-09-28 11:00:06'),
-(7063, '66.249.68.7', '1', NULL, '2024-09-28 14:31:53', '2024-09-28 14:31:53'),
-(7064, '221.203.73.85', '1', NULL, '2024-09-28 18:54:24', '2024-09-28 18:54:24'),
-(7065, '5.133.192.146', '1', NULL, '2024-09-28 19:56:14', '2024-09-28 19:56:14'),
-(7066, '88.99.191.176', '1', NULL, '2024-09-28 23:51:20', '2024-09-28 23:51:20'),
-(7067, '207.246.71.7', '1', NULL, '2024-09-29 06:18:18', '2024-09-29 06:18:18'),
-(7068, '216.128.148.81', '1', NULL, '2024-09-29 08:59:55', '2024-09-29 08:59:55'),
-(7069, '54.36.148.64', '1', NULL, '2024-09-29 09:36:58', '2024-09-29 09:36:58'),
-(7070, '66.249.68.38', '1', NULL, '2024-09-29 14:19:46', '2024-09-29 14:19:46'),
-(7071, '103.227.176.14', '1', NULL, '2024-09-29 16:55:39', '2024-09-29 16:55:39'),
-(7072, '114.119.165.200', '1', NULL, '2024-09-29 17:17:34', '2024-09-29 17:17:34'),
-(7073, '57.141.3.6', '1', NULL, '2024-09-30 01:14:41', '2024-09-30 01:14:41'),
-(7074, '34.41.18.163', '1', NULL, '2024-09-30 06:18:16', '2024-09-30 06:18:16'),
-(7075, '173.252.79.116', '1', NULL, '2024-09-30 08:42:53', '2024-09-30 08:42:53'),
-(7076, '157.173.122.176', '1', NULL, '2024-09-30 13:09:33', '2024-09-30 13:09:33'),
-(7077, '95.108.213.249', '1', NULL, '2024-09-30 13:23:32', '2024-09-30 13:23:32'),
-(7078, '31.13.103.10', '1', NULL, '2024-09-30 17:12:15', '2024-09-30 17:12:15'),
-(7079, '31.13.103.116', '1', NULL, '2024-09-30 17:12:15', '2024-09-30 17:12:15'),
-(7080, '172.105.193.238', '2', NULL, '2024-10-01 02:46:06', '2024-10-01 02:46:14'),
-(7081, '162.243.160.122', '1', NULL, '2024-10-01 09:16:37', '2024-10-01 09:16:37'),
-(7082, '173.252.79.8', '1', NULL, '2024-10-01 18:49:48', '2024-10-01 18:49:48'),
-(7083, '173.252.79.8', '1', NULL, '2024-10-01 18:49:48', '2024-10-01 18:49:48'),
-(7084, '108.129.87.0', '1', NULL, '2024-10-01 19:58:20', '2024-10-01 19:58:20'),
-(7085, '92.255.85.164', '1', NULL, '2024-10-02 02:10:20', '2024-10-02 02:10:20'),
-(7086, '103.227.176.14', '1', NULL, '2024-10-02 16:17:07', '2024-10-02 16:17:07'),
-(7087, '127.0.0.1', '1', NULL, '2024-10-02 20:07:54', '2024-10-02 20:07:54'),
-(7088, '3.135.9.207', '1', NULL, '2024-10-03 10:08:57', '2024-10-03 10:08:57'),
-(7089, '35.88.212.18', '1', NULL, '2024-10-03 12:51:36', '2024-10-03 12:51:36'),
-(7090, '93.158.91.252', '1', NULL, '2024-10-03 14:54:52', '2024-10-03 14:54:52'),
-(7091, '176.9.106.30', '1', NULL, '2024-10-03 16:02:02', '2024-10-03 16:02:02'),
-(7092, '66.249.66.14', '1', NULL, '2024-10-03 16:31:55', '2024-10-03 16:31:55'),
-(7093, '34.86.32.219', '1', NULL, '2024-10-04 00:58:21', '2024-10-04 00:58:21'),
-(7094, '57.141.3.13', '1', NULL, '2024-10-04 02:45:41', '2024-10-04 02:45:41'),
-(7095, '35.180.127.112', '2', NULL, '2024-10-04 03:26:14', '2024-10-04 03:26:21'),
-(7096, '69.171.231.113', '1', NULL, '2024-10-04 14:52:49', '2024-10-04 14:52:49'),
-(7097, '69.171.231.9', '1', NULL, '2024-10-04 14:52:49', '2024-10-04 14:52:49'),
-(7098, '69.63.184.116', '1', NULL, '2024-10-04 16:34:43', '2024-10-04 16:34:43'),
-(7099, '159.65.30.72', '2', NULL, '2024-10-04 23:32:58', '2024-10-04 23:32:59'),
-(7100, '5.133.192.87', '1', NULL, '2024-10-04 23:54:30', '2024-10-04 23:54:30'),
-(7101, '173.252.95.16', '1', NULL, '2024-10-05 05:10:55', '2024-10-05 05:10:55'),
-(7102, '173.252.95.1', '1', NULL, '2024-10-05 05:10:55', '2024-10-05 05:10:55'),
-(7103, '65.19.141.115', '1', NULL, '2024-10-05 06:26:35', '2024-10-05 06:26:35'),
-(7104, '65.21.113.199', '1', NULL, '2024-10-05 06:29:22', '2024-10-05 06:29:22'),
-(7105, '69.171.231.9', '1', NULL, '2024-10-05 06:42:04', '2024-10-05 06:42:04'),
-(7106, '69.171.231.115', '1', NULL, '2024-10-05 06:42:04', '2024-10-05 06:42:04'),
-(7107, '114.119.130.26', '1', NULL, '2024-10-05 07:32:54', '2024-10-05 07:32:54'),
-(7108, '199.244.88.218', '1', NULL, '2024-10-05 09:21:00', '2024-10-05 09:21:00'),
-(7109, '54.74.0.131', '1', NULL, '2024-10-05 14:14:15', '2024-10-05 14:14:15'),
-(7110, '185.104.248.7', '2', NULL, '2024-10-05 15:19:27', '2024-10-05 15:19:29'),
-(7111, '5.180.136.35', '2', NULL, '2024-10-05 15:20:06', '2024-10-05 15:20:07'),
-(7112, '13.38.57.252', '1', NULL, '2024-10-05 18:48:59', '2024-10-05 18:48:59'),
-(7113, '103.248.13.234', '1', NULL, '2024-10-05 21:05:46', '2024-10-05 21:05:46'),
-(7114, '13.39.49.100', '1', NULL, '2024-10-05 22:06:27', '2024-10-05 22:06:27'),
-(7115, '18.237.0.119', '1', NULL, '2024-10-06 01:19:38', '2024-10-06 01:19:38'),
-(7116, '18.237.203.149', '1', NULL, '2024-10-06 01:35:11', '2024-10-06 01:35:11'),
-(7117, '35.88.61.190', '1', NULL, '2024-10-06 01:52:32', '2024-10-06 01:52:32'),
-(7118, '66.249.66.14', '2', NULL, '2024-10-06 06:11:57', '2024-10-06 15:39:21'),
-(7119, '66.249.66.15', '1', NULL, '2024-10-06 06:11:57', '2024-10-06 06:11:57'),
-(7120, '173.252.107.113', '1', NULL, '2024-10-06 09:23:14', '2024-10-06 09:23:14'),
-(7121, '178.254.38.45', '1', NULL, '2024-10-06 10:16:56', '2024-10-06 10:16:56'),
-(7122, '35.230.102.55', '1', NULL, '2024-10-06 12:08:46', '2024-10-06 12:08:46'),
-(7123, '34.174.17.194', '1', NULL, '2024-10-06 12:44:25', '2024-10-06 12:44:25'),
-(7124, '103.227.176.14', '1', NULL, '2024-10-06 13:43:13', '2024-10-06 13:43:13'),
-(7125, '40.77.167.61', '1', NULL, '2024-10-06 17:29:18', '2024-10-06 17:29:18'),
-(7126, '34.136.195.162', '1', NULL, '2024-10-06 19:14:36', '2024-10-06 19:14:36'),
-(7127, '66.249.66.15', '1', NULL, '2024-10-06 20:20:52', '2024-10-06 20:20:52'),
-(7128, '45.120.99.248', '1', NULL, '2024-10-06 20:32:46', '2024-10-06 20:32:46'),
-(7129, '66.249.82.5', '1', NULL, '2024-10-06 20:33:38', '2024-10-06 20:33:38'),
-(7130, '66.249.82.6', '1', NULL, '2024-10-06 20:33:39', '2024-10-06 20:33:39'),
-(7131, '66.249.82.3', '1', NULL, '2024-10-06 20:33:42', '2024-10-06 20:33:42'),
-(7132, '66.249.82.4', '3', NULL, '2024-10-06 20:33:42', '2024-10-06 20:33:47');
+(6777, '127.0.0.1', '18', NULL, '2024-07-08 00:21:32', '2024-07-08 15:27:57');
 
 -- --------------------------------------------------------
 
@@ -8047,11 +7655,11 @@ INSERT INTO `visitor_counts` (`id`, `user_ip`, `viewcount`, `status`, `created_a
 --
 
 CREATE TABLE `why_chooses` (
-  `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `short` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `circle_color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `circle_color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -8286,199 +7894,199 @@ ALTER TABLE `why_chooses`
 -- AUTO_INCREMENT for table `about_us`
 --
 ALTER TABLE `about_us`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `blog_manages`
 --
 ALTER TABLE `blog_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `career_manages`
 --
 ALTER TABLE `career_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `category_manages`
 --
 ALTER TABLE `category_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `contact_forms`
 --
 ALTER TABLE `contact_forms`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `email_configs`
 --
 ALTER TABLE `email_configs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `faq_texts`
 --
 ALTER TABLE `faq_texts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `google_analytics_scripts`
 --
 ALTER TABLE `google_analytics_scripts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `join_us`
 --
 ALTER TABLE `join_us`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `logos`
 --
 ALTER TABLE `logos`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `news_manages`
 --
 ALTER TABLE `news_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `our_experts`
 --
 ALTER TABLE `our_experts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `our_experts_infos`
 --
 ALTER TABLE `our_experts_infos`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `section_manages`
 --
 ALTER TABLE `section_manages`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seo_tools`
 --
 ALTER TABLE `seo_tools`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `slider_manages`
 --
 ALTER TABLE `slider_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `social_icons`
 --
 ALTER TABLE `social_icons`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `subscriber_manages`
 --
 ALTER TABLE `subscriber_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `testimonial_texts`
 --
 ALTER TABLE `testimonial_texts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `video_galleries`
 --
 ALTER TABLE `video_galleries`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `visa_key_contacts`
 --
 ALTER TABLE `visa_key_contacts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `visa_manages`
 --
 ALTER TABLE `visa_manages`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `visa_manage_galleries`
 --
 ALTER TABLE `visa_manage_galleries`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `visitor_counts`
 --
 ALTER TABLE `visitor_counts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7133;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6778;
 
 --
 -- AUTO_INCREMENT for table `why_chooses`
 --
 ALTER TABLE `why_chooses`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

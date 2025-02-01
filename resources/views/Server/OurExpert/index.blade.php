@@ -197,23 +197,23 @@
 
 
 
-                                 <div class="form-group mb-3">
-                                    <label for="categoryName" class="costom-label">Hover Image ( <span style="color:red">Max Size: Width:300px, Height:300px</span> )</label>
-                                    <input
-                                    id="categoryName"
-                                    name="hover_image"
-                                    type="file"
+                                 <!--<div class="form-group mb-3">-->
+                                 <!--   <label for="categoryName" class="costom-label">Hover Image ( <span style="color:red">Max Size: Width:300px, Height:300px</span> )</label>-->
+                                 <!--   <input-->
+                                 <!--   id="categoryName"-->
+                                 <!--   name="hover_image"-->
+                                 <!--   type="file"-->
                                    
             
                                    
-                                    class="form-control custom-shadow bg-white"
-                                    placeholder="Ex: image"
-                                    />
+                                 <!--   class="form-control custom-shadow bg-white"-->
+                                 <!--   placeholder="Ex: image"-->
+                                 <!--   />-->
 
-                                    @if($edit_status==true)
-                                     <img style="width:100px" src="{{(@$edit->hover_image)?url('upload/OurExperts/'.@$edit->hover_image):''}}" alt="">
-                                    @endif
-                                 </div>
+                                 <!--   @if($edit_status==true)-->
+                                 <!--    <img style="width:100px" src="{{(@$edit->hover_image)?url('upload/OurExperts/'.@$edit->hover_image):''}}" alt="">-->
+                                 <!--   @endif-->
+                                 <!--</div>-->
                                  
                     </div>
 

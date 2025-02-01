@@ -157,10 +157,7 @@ h6 {
     --bg-dark: #22244E;
 }
 
-/* =========== setting the width for table data show select option */
-.table-responsive #default_order_length label select{
-    width: 100px;
-}
+
 /* ================ padding ============== */
 .pt-150 {
     padding-top: 150px;
@@ -616,21 +613,18 @@ h6 {
     bottom: 12px;
 }
 
-/* .service_item.item-1{
+.service_item.item-1{
     border-radius: 20px 0 0 0;
 }
 .service_item.item-2{
-    border-radius: 0 0 0 0;
+    border-radius: 0 20px 0 0;
 }
 .service_item.item-3{
-    border-radius: 0 0 0 0;
+    border-radius: 0 0 0 20px;
 }
 .service_item.item-4{
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 0 20px 0;
 }
-.service_item.item-5{
-    border-radius: 0 0 20px 20px;
-} */
 
 .services-four{}
 .services-four .service_item{
@@ -786,19 +780,29 @@ h6 {
 .team-member .member-photo img {
     border-radius: 16px 16px 0px 0px !important;
     height: 300px;
-    transition:   0.5s;
+    transition:  opacity 0.5s ease;
 }
 
-.team-member .member-photo img:hover{
-    background-color: #fbb216;
+.team-member .member-photo .main-img {
+    opacity: 1;
 }
 
+.team-member .member-photo .hover-img {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
 
+.team-member .member-photo:hover .main-img {
+    opacity: 0;
+}
 
-
-
-
-
+.team-member .member-photo:hover .hover-img {
+    opacity: 1;
+}
 
 
 .team-member .member-info .member-info-text {
@@ -1221,7 +1225,6 @@ h6 {
 }
 
 .site_cookie {
-    display: none;
     position: fixed;
     bottom: 37px;
     left: 74px;

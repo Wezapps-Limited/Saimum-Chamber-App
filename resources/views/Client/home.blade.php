@@ -337,7 +337,7 @@
                            <div class="member-photo">
                                <a href="{{route('SingleExpertise',@$our->id)}}">
                                    <img src="{{(@$our->image)?url('upload/OurExperts/'.@$our->image):''}}" class="card-img-top img-fluid main-img" alt="MD Shafiqur Rahman">
-                                   <img src="{{(@$our->hover_image)?url('upload/OurExperts/'.@$our->hover_image):''}}" class="card-img-top img-fluid hover-img" alt="MD Shafiqur Rahman">
+                                   <!--<img src="{{(@$our->hover_image)?url('upload/OurExperts/'.@$our->hover_image):''}}" class="card-img-top img-fluid hover-img" alt="MD Shafiqur Rahman">-->
                                </a>
                            </div>
                            <div class="card-body member-info">
